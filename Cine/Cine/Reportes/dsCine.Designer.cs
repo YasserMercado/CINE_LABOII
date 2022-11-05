@@ -685,6 +685,7 @@ namespace Cine.Reportes {
                 this.columnCantidad.ReadOnly = true;
                 this.columnMes.ReadOnly = true;
                 this.columnAño.ReadOnly = true;
+                this.Locale = new global::System.Globalization.CultureInfo("es");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3949,7 +3950,7 @@ namespace Cine.Reportes.dsCineTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
+            this._connection.ConnectionString = "Data Source=DESKTOP-RD7RILQ\\SQLEXPRESS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
                 "";
         }
         
@@ -4131,7 +4132,7 @@ HAVING        (COUNT(*) > 10)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
+            this._connection.ConnectionString = "Data Source=DESKTOP-RD7RILQ\\SQLEXPRESS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
                 "";
         }
         
@@ -4317,7 +4318,7 @@ ORDER BY 3, 2";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
+            this._connection.ConnectionString = "Data Source=DESKTOP-RD7RILQ\\SQLEXPRESS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
                 "";
         }
         
@@ -4496,7 +4497,7 @@ ORDER BY Fecha";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
+            this._connection.ConnectionString = "Data Source=DESKTOP-RD7RILQ\\SQLEXPRESS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
                 "";
         }
         
@@ -4680,7 +4681,7 @@ HAVING        (SUM(c.monto) >
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
+            this._connection.ConnectionString = "Data Source=DESKTOP-RD7RILQ\\SQLEXPRESS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
                 "";
         }
         
@@ -4861,7 +4862,7 @@ ORDER BY DESCUENTO";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
+            this._connection.ConnectionString = "Data Source=DESKTOP-RD7RILQ\\SQLEXPRESS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
                 "";
         }
         
@@ -5043,7 +5044,7 @@ ORDER BY ASISTENCIAS DESC";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
+            this._connection.ConnectionString = "Data Source=DESKTOP-RD7RILQ\\SQLEXPRESS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
                 "";
         }
         
@@ -5220,7 +5221,7 @@ GROUP BY p.nombre_pelicula";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
+            this._connection.ConnectionString = "Data Source=DESKTOP-RD7RILQ\\SQLEXPRESS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
                 "";
         }
         
