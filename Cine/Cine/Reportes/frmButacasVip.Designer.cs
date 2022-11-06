@@ -30,13 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsCine = new Cine.Reportes.dsCine();
             this.dsButacasVipBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsCine = new Cine.Reportes.dsCine();
             this.dsButacasVipTableAdapter = new Cine.Reportes.dsCineTableAdapters.dsButacasVipTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dsButacasVipBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dsButacasVipBindingSource
+            // 
+            this.dsButacasVipBindingSource.DataMember = "dsButacasVip";
+            this.dsButacasVipBindingSource.DataSource = this.dsCine;
+            // 
+            // dsCine
+            // 
+            this.dsCine.DataSetName = "dsCine";
+            this.dsCine.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dsButacasVipTableAdapter
+            // 
+            this.dsButacasVipTableAdapter.ClearBeforeFill = true;
             // 
             // reportViewer1
             // 
@@ -44,46 +58,33 @@
             reportDataSource1.Value = this.dsButacasVipBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptButacasVip.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(83, 22);
+            this.reportViewer1.Location = new System.Drawing.Point(111, 27);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(648, 388);
+            this.reportViewer1.Size = new System.Drawing.Size(863, 477);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // dsCine
-            // 
-            this.dsCine.DataSetName = "dsCine";
-            this.dsCine.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dsButacasVipBindingSource
-            // 
-            this.dsButacasVipBindingSource.DataMember = "dsButacasVip";
-            this.dsButacasVipBindingSource.DataSource = this.dsCine;
-            // 
-            // dsButacasVipTableAdapter
-            // 
-            this.dsButacasVipTableAdapter.ClearBeforeFill = true;
             // 
             // frmButacasVip
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmButacasVip";
             this.Text = "frmButacasVip";
             this.Load += new System.EventHandler(this.frmButacasVip_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsCine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsButacasVipBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCine)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private dsCine dsCine;
         private System.Windows.Forms.BindingSource dsButacasVipBindingSource;
         private dsCineTableAdapters.dsButacasVipTableAdapter dsButacasVipTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
