@@ -5,6 +5,21 @@ GO
 
 SET DATEFORMAT dmy
 
+create table Users(
+UserID int identity(1,1),
+LoginName nvarchar(100) unique not null,
+Password nvarchar(100) not null,
+FirstName nvarchar(100) not null,
+LastName nvarchar(100) not null,
+Position nvarchar(100) not null,
+Email nvarchar(150) not null
+)
+
+insert into Users values('admin','admin','Gerardo','Valdez','Administrador','ger4rdovaldez@gmail.com')
+
+
+
+
 ------------ESTADOS--VARIOS----
 create table ESTADOS(
 id_estado int identity(1,1),
@@ -971,18 +986,6 @@ INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES
 INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (45,4,37,'07/10/2022')
 INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (54,4,38,'07/10/2022')
 INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
-INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
-INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
-INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
-INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
-INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
-INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
-INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
-INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
-INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
-INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
-INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
-INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
 INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
 
 

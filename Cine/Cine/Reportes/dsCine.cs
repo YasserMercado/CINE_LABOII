@@ -4,6 +4,10 @@
 
     partial class dsCine
     {
+        partial class dtRecurrentesDataTable
+        {
+        }
+
         partial class dtTodosLosClientesDataTable
         {
         }
@@ -31,5 +35,12 @@
         partial class dtClasificaiconesMasVistasDataTable
         {
         }
+    }
+}
+
+namespace Cine.Reportes.dsCineTableAdapters {
+    
+    
+    public partial class dtRecurrentesTableAdapter {
     }
 }

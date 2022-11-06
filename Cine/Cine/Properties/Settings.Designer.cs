@@ -33,5 +33,16 @@ namespace Cine.Properties {
                 return ((string)(this["CINE_CORDOBAConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-RD7RILQ\\SQLEXPRESS;Initial Catalog=CINE_CORDOBA;Integrated Se" +
+            "curity=True")]
+        public string CINE_CORDOBAConnectionString1 {
+            get {
+                return ((string)(this["CINE_CORDOBAConnectionString1"]));
+            }
+        }
     }
 }

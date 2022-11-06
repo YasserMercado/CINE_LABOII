@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Cine
 {
@@ -16,7 +17,10 @@ namespace Cine
         {
             InitializeComponent();
         }
-
+        [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         private void Form1_Load(object sender, EventArgs e)
         {
         
@@ -24,8 +28,7 @@ namespace Cine
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Formularios.FrmClientes clientes = new Formularios.FrmClientes();
-            clientes.ShowDialog();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -81,6 +84,47 @@ namespace Cine
         {
             Reportes.frmTop5Agosto rango = new Reportes.frmTop5Agosto();
             rango.ShowDialog();
+        }
+
+        private void panel12_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Formularios.FrmClientes clientes = new Formularios.FrmClientes();
+            clientes.ShowDialog();
+        }
+
+        private void frmHome_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel12_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
