@@ -4,6 +4,10 @@
 
     partial class dsCine
     {
+        partial class dtTodosLosClientesDataTable
+        {
+        }
+
         partial class dtVentaOnlineDataTable
         {
         }

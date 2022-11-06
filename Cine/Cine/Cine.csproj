@@ -70,11 +70,11 @@
     <Compile Include="Formularios\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Home.cs">
+    <Compile Include="Formularios\FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="Formularios\FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,8 +150,8 @@
     <EmbeddedResource Include="Formularios\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -199,6 +199,7 @@
     <EmbeddedResource Include="Reportes\rptMenos10Entradas.rdlc" />
     <EmbeddedResource Include="Reportes\rptRecaudacionSpielberg.rdlc" />
     <EmbeddedResource Include="Reportes\rptRecurrentes.rdlc" />
+    <EmbeddedResource Include="Reportes\rptTodosLosClientes.rdlc" />
     <EmbeddedResource Include="Reportes\rptTop5VendidasAgosto.rdlc" />
     <EmbeddedResource Include="Reportes\rptVentaOnline.rdlc" />
     <EmbeddedResource Include="Reportes\rptVentasxRango.rdlc" />

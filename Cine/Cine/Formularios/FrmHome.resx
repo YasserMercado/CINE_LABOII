@@ -117,15 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="dtRecurrentesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>105, 17</value>
-  </metadata>
-  <metadata name="dsCine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="dtRecurrentesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>311, 17</value>
-  </metadata>
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>512, 17</value>
   </metadata>
@@ -142,7 +133,7 @@
         xwy9ylrnETcJq+ZijuoQrWHYyCKNFCQoqGINOhwkqJqU2e++ZNO3gAp5GH0t1MDJUUKZvHFSq9RVpaqR
         rtLUURO5/8zT1ibGve7hFBB8ct23EaB7B2jUXffryHUbx0DgEbgw2/4K5TT1QXq9rcUOgMgmcHbZ1pRd
         4HwLGHywZC43pQAtv6YBr6dAXwGI3gC9K15WrX2c3AP5DXqia2BvHxil/yOr3yZgaByhZEMEAAAACXBI
-        WXMAAAsOAAALDgFAvuFBAADesUlEQVR4Xuz9B3SV15ItjPYYb4z3/vff8Hf36eOIcyAq55xzzjmQc7Rx
+        WXMAAAsMAAALDAE/QCLIAADesUlEQVR4Xuz9B3SV15ItjPYYb4z3/vff8Hf36eOIcyAq55xzzjmQc7Rx
         NtgYjMFkkJCEQEggokCgLIEQIuecc845ijjfrNraIGThY5/Tfe5919YYNfbW3t9e3/rWqlk1q1b6lz//
         /vz78+/Pv3/K37Hy0r/uyM8LWj9pUmHZt99hXv9BmN+7H2YkJ2N6YhSmBHtjnLcbJnm6YbKnCzI8nJDp
         aodMZ2tMd7PBTE8H5Ls7Is/VBXkuXshz9sFkM3tk2bgi18EF0xx5naspZrhZYLqTMz9z09fpTvyNozNm
@@ -1095,4 +1086,16 @@
         bQHkKv/LOq9ZFObK3ELsqaofOmnzsf7+8pf/A4TrCcNyBrJbAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="dtRecurrentesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>105, 17</value>
+  </metadata>
+  <metadata name="dsCine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="dsCine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="dtRecurrentesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>311, 17</value>
+  </metadata>
 </root>

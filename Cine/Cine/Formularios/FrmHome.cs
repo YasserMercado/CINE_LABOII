@@ -34,7 +34,8 @@ namespace Cine
             Clasificaciones.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+        private void button3_Click(object sender, EventArgs e)  //Hay que sacarlo
         {
             Reportes.frmClientesAgosto clientesAgosto = new Reportes.frmClientesAgosto();
             clientesAgosto.ShowDialog();

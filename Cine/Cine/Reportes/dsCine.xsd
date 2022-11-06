@@ -321,6 +321,25 @@ ORDER BY VENDIDAS DESC</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtTodosLosClientesTableAdapter" GeneratorDataComponentClassName="dtTodosLosClientesTableAdapter" Name="dtTodosLosClientes" UserDataComponentName="dtTodosLosClientesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectName="CINE_CORDOBA.dbo.CLIENTES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT UPPER(apellido_cliente) + ', ' + UPPER(LEFT (nombre_cliente, 1)) + LOWER(SUBSTRING(nombre_cliente, 2, LEN(nombre_cliente))) AS Cliente, genero AS Genero, CONVERT (date, fecha_alta, 0) AS Fecha_Alta, DATEDIFF(year, fecha_nacimiento, GETDATE()) AS Edad FROM CLIENTES</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
+              <Mapping SourceColumn="Genero" DataSetColumn="Genero" />
+              <Mapping SourceColumn="Fecha_Alta" DataSetColumn="Fecha_Alta" />
+              <Mapping SourceColumn="Edad" DataSetColumn="Edad" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -505,6 +524,28 @@ ORDER BY VENDIDAS DESC</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="VENDIDAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="VENDIDAS" msprop:Generator_ColumnPropNameInTable="VENDIDASColumn" msprop:Generator_ColumnPropNameInRow="VENDIDAS" msprop:Generator_ColumnVarNameInTable="columnVENDIDAS" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTodosLosClientes" msprop:Generator_RowEvHandlerName="dtTodosLosClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTodosLosClientesRowDeleted" msprop:Generator_RowDeletingName="dtTodosLosClientesRowDeleting" msprop:Generator_RowEvArgName="dtTodosLosClientesRowChangeEvent" msprop:Generator_TablePropName="dtTodosLosClientes" msprop:Generator_RowChangedName="dtTodosLosClientesRowChanged" msprop:Generator_RowChangingName="dtTodosLosClientesRowChanging" msprop:Generator_TableClassName="dtTodosLosClientesDataTable" msprop:Generator_RowClassName="dtTodosLosClientesRow" msprop:Generator_TableVarName="tabledtTodosLosClientes" msprop:Generator_UserTableName="dtTodosLosClientes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cliente" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_UserColumnName="Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="103" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Genero" msprop:Generator_ColumnPropNameInRow="Genero" msprop:Generator_ColumnPropNameInTable="GeneroColumn" msprop:Generator_ColumnVarNameInTable="columnGenero" msprop:Generator_UserColumnName="Genero" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha_Alta" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Fecha_Alta" msprop:Generator_ColumnPropNameInTable="Fecha_AltaColumn" msprop:Generator_ColumnVarNameInTable="columnFecha_Alta" msprop:Generator_UserColumnName="Fecha_Alta" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Edad" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Edad" msprop:Generator_ColumnPropNameInTable="EdadColumn" msprop:Generator_ColumnVarNameInTable="columnEdad" msprop:Generator_UserColumnName="Edad" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
