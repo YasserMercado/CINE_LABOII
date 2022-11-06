@@ -1,6 +1,6 @@
 ﻿namespace Cine.Reportes
 {
-    partial class frmReporteRecurrentes
+    partial class frmVentaxRango
     {
         /// <summary>
         /// Required designer variable.
@@ -30,51 +30,51 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.dtRecurrentesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsCine = new Cine.Reportes.dsCine();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dtRecurrentesTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtRecurrentesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dtRecurrentesBindingSource)).BeginInit();
+            this.dsCine = new Cine.Reportes.dsCine();
+            this.dtVentasxRangoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtVentasxRangoTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtVentasxRangoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dtRecurrentesBindingSource
+            // reportViewer1
             // 
-            this.dtRecurrentesBindingSource.DataMember = "dtRecurrentes";
-            this.dtRecurrentesBindingSource.DataSource = this.dsCine;
+            reportDataSource1.Name = "dsVentasxRango";
+            reportDataSource1.Value = this.dtVentasxRangoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptVentasxRango.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(103, 41);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(566, 347);
+            this.reportViewer1.TabIndex = 0;
             // 
             // dsCine
             // 
             this.dsCine.DataSetName = "dsCine";
             this.dsCine.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // dtVentasxRangoBindingSource
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.dtRecurrentesBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptRecurrentes.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(199, 12);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(645, 302);
-            this.reportViewer1.TabIndex = 0;
+            this.dtVentasxRangoBindingSource.DataMember = "dtVentasxRango";
+            this.dtVentasxRangoBindingSource.DataSource = this.dsCine;
             // 
-            // dtRecurrentesTableAdapter
+            // dtVentasxRangoTableAdapter
             // 
-            this.dtRecurrentesTableAdapter.ClearBeforeFill = true;
+            this.dtVentasxRangoTableAdapter.ClearBeforeFill = true;
             // 
-            // frmReporteRecurrentes
+            // frmVentaxRango
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 415);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frmReporteRecurrentes";
-            this.Text = "ReporteRecurrentes";
-            this.Load += new System.EventHandler(this.ReporteRecurrentes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtRecurrentesBindingSource)).EndInit();
+            this.Name = "frmVentaxRango";
+            this.Text = "frmVentaxRango";
+            this.Load += new System.EventHandler(this.frmVentaxRango_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,7 +83,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private dsCine dsCine;
-        private System.Windows.Forms.BindingSource dtRecurrentesBindingSource;
-        private dsCineTableAdapters.dtRecurrentesTableAdapter dtRecurrentesTableAdapter;
+        private System.Windows.Forms.BindingSource dtVentasxRangoBindingSource;
+        private dsCineTableAdapters.dtVentasxRangoTableAdapter dtVentasxRangoTableAdapter;
     }
 }

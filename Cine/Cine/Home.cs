@@ -24,7 +24,7 @@ namespace Cine
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Reportes.frmReporteRecurrentes recurrentes = new Reportes.frmReporteRecurrentes();
+            Reportes.frmRecurrentes recurrentes = new Reportes.frmRecurrentes();
             recurrentes.ShowDialog();
         }
 
@@ -68,6 +68,18 @@ namespace Cine
         {
             Reportes.frmVentaOnline online = new Reportes.frmVentaOnline();
             online.ShowDialog();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Reportes.frmVentaxRango rango = new Reportes.frmVentaxRango();
+            rango.ShowDialog();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Reportes.frmTop5Agosto rango = new Reportes.frmTop5Agosto();
+            rango.ShowDialog();
         }
     }
 }

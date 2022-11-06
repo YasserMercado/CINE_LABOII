@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace Cine.Reportes
 {
-    public partial class frmReporteRecurrentes : Form
+    public partial class frmVentaxRango : Form
     {
-        public frmReporteRecurrentes()
+        public frmVentaxRango()
         {
             InitializeComponent();
         }
 
-        private void ReporteRecurrentes_Load(object sender, EventArgs e)
+        private void frmVentaxRango_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dsCine.dtRecurrentes' Puede moverla o quitarla según sea necesario.
-            this.dtRecurrentesTableAdapter.Fill(this.dsCine.dtRecurrentes);
+            // TODO: esta línea de código carga datos en la tabla 'dsCine.dtVentasxRango' Puede moverla o quitarla según sea necesario.
+            this.dtVentasxRangoTableAdapter.Fill(this.dsCine.dtVentasxRango);
 
             this.reportViewer1.RefreshReport();
         }

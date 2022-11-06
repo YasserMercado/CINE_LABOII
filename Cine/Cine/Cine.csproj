@@ -64,11 +64,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Principal.cs">
+    <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal.Designer.cs">
-      <DependentUpon>Principal.cs</DependentUpon>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,11 +116,17 @@
     <Compile Include="Reportes\frmRecaudacionSpielberg.Designer.cs">
       <DependentUpon>frmRecaudacionSpielberg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmReporteRecurrentes.cs">
+    <Compile Include="Reportes\frmRecurrentes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmReporteRecurrentes.Designer.cs">
-      <DependentUpon>frmReporteRecurrentes.cs</DependentUpon>
+    <Compile Include="Reportes\frmRecurrentes.Designer.cs">
+      <DependentUpon>frmRecurrentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmTop5Agosto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmTop5Agosto.Designer.cs">
+      <DependentUpon>frmTop5Agosto.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\frmVentaOnline.cs">
       <SubType>Form</SubType>
@@ -128,9 +134,15 @@
     <Compile Include="Reportes\frmVentaOnline.Designer.cs">
       <DependentUpon>frmVentaOnline.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\frmVentaxRango.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmVentaxRango.Designer.cs">
+      <DependentUpon>frmVentaxRango.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="Principal.resx">
-      <DependentUpon>Principal.cs</DependentUpon>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,11 +172,17 @@
     <EmbeddedResource Include="Reportes\frmRecaudacionSpielberg.resx">
       <DependentUpon>frmRecaudacionSpielberg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmReporteRecurrentes.resx">
-      <DependentUpon>frmReporteRecurrentes.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\frmRecurrentes.resx">
+      <DependentUpon>frmRecurrentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmTop5Agosto.resx">
+      <DependentUpon>frmTop5Agosto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmVentaOnline.resx">
       <DependentUpon>frmVentaOnline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmVentaxRango.resx">
+      <DependentUpon>frmVentaxRango.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptButacasVip.rdlc" />
     <EmbeddedResource Include="Reportes\rptClasificacionesMasVistas.rdlc" />
@@ -173,7 +191,9 @@
     <EmbeddedResource Include="Reportes\rptMenos10Entradas.rdlc" />
     <EmbeddedResource Include="Reportes\rptRecaudacionSpielberg.rdlc" />
     <EmbeddedResource Include="Reportes\rptRecurrentes.rdlc" />
+    <EmbeddedResource Include="Reportes\rptTop5VendidasAgosto.rdlc" />
     <EmbeddedResource Include="Reportes\rptVentaOnline.rdlc" />
+    <EmbeddedResource Include="Reportes\rptVentasxRango.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

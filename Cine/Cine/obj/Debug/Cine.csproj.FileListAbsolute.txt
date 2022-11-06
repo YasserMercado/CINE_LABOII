@@ -62,7 +62,6 @@ C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\bin\Debug\zh-CHS\Microsoft.ReportV
 C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.csproj.CopyComplete
 C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.Reportes.frmClasificacionesMasVistas.resources
-C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.Reportes.frmReporteRecurrentes.resources
 C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.frmHome.resources
 C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.Reportes.frmClientesAgosto.resources
 C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.Reportes.frmMenos10Butacas.resources
@@ -70,6 +69,9 @@ C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.Reportes.frmDescuen
 C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.Reportes.frmButacasVip.resources
 C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.Reportes.frmRecaudacionSpielberg.resources
 C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.Reportes.frmVentaOnline.resources
+C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.Reportes.frmRecurrentes.resources
+C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.Reportes.frmVentaxRango.resources
+C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\obj\Debug\Cine.Reportes.frmTop5Agosto.resources
 C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -134,8 +136,10 @@ C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\obj\Debug\Cine.Reporte
 C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\obj\Debug\Cine.Reportes.frmDescuentoTarjeta.resources
 C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\obj\Debug\Cine.Reportes.frmMenos10Butacas.resources
 C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\obj\Debug\Cine.Reportes.frmRecaudacionSpielberg.resources
-C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\obj\Debug\Cine.Reportes.frmReporteRecurrentes.resources
+C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\obj\Debug\Cine.Reportes.frmRecurrentes.resources
+C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\obj\Debug\Cine.Reportes.frmTop5Agosto.resources
 C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\obj\Debug\Cine.Reportes.frmVentaOnline.resources
+C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\obj\Debug\Cine.Reportes.frmVentaxRango.resources
 C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\obj\Debug\Cine.csproj.GenerateResource.cache
 C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\obj\Debug\Cine.csproj.CoreCompileInputs.cache
 C:\Users\YASS\Documents\TUP\LABO II\CINE_LABOII\Cine\Cine\obj\Debug\Cine.csproj.CopyComplete
