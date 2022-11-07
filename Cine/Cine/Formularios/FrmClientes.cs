@@ -36,7 +36,7 @@ namespace Cine.Formularios
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtTodosLosClientes' Puede moverla o quitarla según sea necesario.
             this.dtTodosLosClientesTableAdapter.Fill(this.dsCine.dtTodosLosClientes);
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtClientesAgosto' Puede moverla o quitarla según sea necesario.
-            this.dtClientesAgostoTableAdapter.Fill(this.dsCine.dtClientesAgosto);
+            //this.dtClientesAgostoTableAdapter.Fill(this.dsCine.dtClientesAgosto);
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtRecurrentes' Puede moverla o quitarla según sea necesario.
             this.dtRecurrentesTableAdapter.Fill(this.dsCine.dtRecurrentes);
             this.reportViewer1.RefreshReport();

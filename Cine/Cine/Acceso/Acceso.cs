@@ -14,7 +14,7 @@ namespace Cine.Acceso
 
         public Acceso()
         {
-            conexion = "Data Source=DESKTOP-RD7RILQ\\SQLEXPRESS;Initial Catalog=CINE_CORDOBA;Integrated Security=True";
+            conexion = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True";
         }
 
         protected SqlConnection GetConnection()

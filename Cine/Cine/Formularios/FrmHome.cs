@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Cine.Reportes;
+using Cine.Formularios;
 
 namespace Cine
 {
@@ -126,5 +128,23 @@ namespace Cine
         {
             Application.Exit();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+           
+            frmSugerenciasMejoras mejoras = new frmSugerenciasMejoras();
+            mejoras.Show();
+        
+
+        }
+
+        
     }
 }
