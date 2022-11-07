@@ -38,9 +38,12 @@
     }
 }
 
-namespace Cine.Reportes.dsCineTableAdapters {
-    
-    
+namespace Cine.Reportes.dsCineTableAdapters
+{
+    partial class dtTodosLosClientesTableAdapter
+    {
+    }
+
     public partial class dtRecurrentesTableAdapter {
     }
 }

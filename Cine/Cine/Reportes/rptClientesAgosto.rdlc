@@ -190,7 +190,7 @@
         <DataSetName>dsClientesAgosto</DataSetName>
         <Top>1.13454cm</Top>
         <Left>6.84954cm</Left>
-        <Height>1.35875cm</Height>
+        <Height>1.35876cm</Height>
         <Width>7.24896cm</Width>
         <Style>
           <Border>
@@ -248,7 +248,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>1.0287cm</Top>
-          <Left>4.91808cm</Left>
+          <Left>5.69136cm</Left>
           <Height>0.99688cm</Height>
           <Width>9.61729cm</Width>
           <ZIndex>1</ZIndex>
@@ -269,7 +269,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>!!!!</Value>
                   <Style>
                     <Format>d</Format>
                     <Color>LightGrey</Color>
@@ -283,7 +283,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
           <Top>2.53683cm</Top>
-          <Left>8.47672cm</Left>
+          <Left>9.25cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>2</ZIndex>
@@ -317,7 +317,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>!!!!</Value>
                   <Style>
                     <Format>d</Format>
                     <Color>LightGrey</Color>
@@ -426,7 +426,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsCine</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\Reportes\dsCine.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\usuario\Desktop\UTN\CINE_LABOII\Cine\Cine\Reportes\dsCine.xsd</rd:SchemaPath>
         <rd:TableName>dtClientesAgosto</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

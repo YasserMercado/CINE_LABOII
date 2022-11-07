@@ -36,6 +36,7 @@
             this.dtRecurrentesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsCine = new Cine.Reportes.dsCine();
             this.dtClientesAgostoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dtTodosLosClientesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dtTodosLosClientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dtTodosLosClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -48,20 +49,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.button3 = new Cine.Botones.buttonPersonalizado();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button2 = new Cine.Botones.buttonPersonalizado();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new Cine.Botones.buttonPersonalizado();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.button3 = new Cine.Botones.buttonPersonalizado();
-            this.button2 = new Cine.Botones.buttonPersonalizado();
-            this.button1 = new Cine.Botones.buttonPersonalizado();
             ((System.ComponentModel.ISupportInitialize)(this.dtRecurrentesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodosLosClientesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTodosLosClientesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTodosLosClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource)).BeginInit();
@@ -89,6 +91,11 @@
             this.dtClientesAgostoBindingSource1.DataMember = "dtClientesAgosto";
             this.dtClientesAgostoBindingSource1.DataSource = this.dsCine;
             // 
+            // dtTodosLosClientesBindingSource2
+            // 
+            this.dtTodosLosClientesBindingSource2.DataMember = "dtTodosLosClientes";
+            this.dtTodosLosClientesBindingSource2.DataSource = this.dsCine;
+            // 
             // dtTodosLosClientesBindingSource1
             // 
             this.dtTodosLosClientesBindingSource1.DataMember = "dtTodosLosClientes";
@@ -105,10 +112,10 @@
             reportDataSource1.Value = this.dtRecurrentesBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptRecurrentes.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(260, 75);
+            this.reportViewer1.Location = new System.Drawing.Point(256, 31);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(682, 520);
+            this.reportViewer1.Size = new System.Drawing.Size(813, 564);
             this.reportViewer1.TabIndex = 2;
             // 
             // dtRecurrentesTableAdapter
@@ -121,10 +128,10 @@
             reportDataSource2.Value = this.dtClientesAgostoBindingSource1;
             this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptClientesAgosto.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(260, 75);
+            this.reportViewer2.Location = new System.Drawing.Point(256, 31);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(682, 520);
+            this.reportViewer2.Size = new System.Drawing.Size(813, 564);
             this.reportViewer2.TabIndex = 5;
             // 
             // dtClientesAgostoBindingSource
@@ -139,13 +146,13 @@
             // reportViewer3
             // 
             reportDataSource3.Name = "DSTodosLosClientes";
-            reportDataSource3.Value = this.dtTodosLosClientesBindingSource1;
+            reportDataSource3.Value = this.dtTodosLosClientesBindingSource2;
             this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptTodosLosClientes.rdlc";
-            this.reportViewer3.Location = new System.Drawing.Point(260, 75);
+            this.reportViewer3.Location = new System.Drawing.Point(256, 31);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.ServerReport.BearerToken = null;
-            this.reportViewer3.Size = new System.Drawing.Size(682, 520);
+            this.reportViewer3.Size = new System.Drawing.Size(813, 564);
             this.reportViewer3.TabIndex = 6;
             // 
             // dtTodosLosClientesTableAdapter
@@ -185,90 +192,10 @@
             this.panel8.Controls.Add(this.button3);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 300);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(250, 53);
             this.panel8.TabIndex = 18;
-            // 
-            // panel7
-            // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 288);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(250, 12);
-            this.panel7.TabIndex = 17;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 235);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(250, 53);
-            this.panel6.TabIndex = 16;
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 223);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(250, 12);
-            this.panel5.TabIndex = 15;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 170);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(250, 53);
-            this.panel4.TabIndex = 14;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 146);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(250, 24);
-            this.panel3.TabIndex = 13;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 146);
-            this.panel2.TabIndex = 12;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(51, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(151, 137);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(925, 6);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(13, 13);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 9;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // button3
             // 
@@ -292,6 +219,26 @@
             this.button3.Text = "DE AGOSTO";
             this.button3.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 288);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(250, 12);
+            this.panel7.TabIndex = 17;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.button2);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 235);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(250, 53);
+            this.panel6.TabIndex = 16;
             // 
             // button2
             // 
@@ -315,6 +262,26 @@
             this.button2.Text = "FRECUENTES";
             this.button2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 223);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(250, 12);
+            this.panel5.TabIndex = 15;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 170);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(250, 53);
+            this.panel4.TabIndex = 14;
             // 
             // button1
             // 
@@ -340,12 +307,54 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 146);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(250, 24);
+            this.panel3.TabIndex = 13;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 146);
+            this.panel2.TabIndex = 12;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(51, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(151, 137);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(1056, 6);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(13, 13);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 9;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(945, 601);
+            this.ClientSize = new System.Drawing.Size(1075, 601);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.reportViewer3);
             this.Controls.Add(this.reportViewer2);
@@ -361,6 +370,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtRecurrentesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodosLosClientesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTodosLosClientesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTodosLosClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource)).EndInit();
@@ -403,5 +413,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.BindingSource dtTodosLosClientesBindingSource2;
     }
 }

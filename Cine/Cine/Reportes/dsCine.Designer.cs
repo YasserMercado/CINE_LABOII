@@ -5230,8 +5230,7 @@ namespace Cine.Reportes.dsCineTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
-                "";
+            this._connection.ConnectionString = global::Cine.Properties.Settings.Default.CINE_CORDOBAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5412,8 +5411,7 @@ HAVING        (COUNT(*) > 10)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
-                "";
+            this._connection.ConnectionString = global::Cine.Properties.Settings.Default.CINE_CORDOBAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5598,8 +5596,7 @@ ORDER BY 3, 2";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
-                "";
+            this._connection.ConnectionString = global::Cine.Properties.Settings.Default.CINE_CORDOBAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5777,8 +5774,7 @@ ORDER BY Fecha";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
-                "";
+            this._connection.ConnectionString = global::Cine.Properties.Settings.Default.CINE_CORDOBAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5961,8 +5957,7 @@ HAVING        (SUM(c.monto) >
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
-                "";
+            this._connection.ConnectionString = global::Cine.Properties.Settings.Default.CINE_CORDOBAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6142,8 +6137,7 @@ ORDER BY DESCUENTO";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
-                "";
+            this._connection.ConnectionString = global::Cine.Properties.Settings.Default.CINE_CORDOBAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6324,8 +6318,7 @@ ORDER BY ASISTENCIAS DESC";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
-                "";
+            this._connection.ConnectionString = global::Cine.Properties.Settings.Default.CINE_CORDOBAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6501,8 +6494,7 @@ GROUP BY p.nombre_pelicula";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
-                "";
+            this._connection.ConnectionString = global::Cine.Properties.Settings.Default.CINE_CORDOBAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6694,8 +6686,7 @@ GROUP BY p.nombre_pelicula";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
-                "";
+            this._connection.ConnectionString = global::Cine.Properties.Settings.Default.CINE_CORDOBAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6882,8 +6873,7 @@ GROUP BY p.nombre_pelicula";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
-                "";
+            this._connection.ConnectionString = global::Cine.Properties.Settings.Default.CINE_CORDOBAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7061,8 +7051,7 @@ ORDER BY VENDIDAS DESC";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
-                "";
+            this._connection.ConnectionString = global::Cine.Properties.Settings.Default.CINE_CORDOBAConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7071,7 +7060,9 @@ ORDER BY VENDIDAS DESC";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT UPPER(apellido_cliente) + ', ' + UPPER(LEFT (nombre_cliente, 1)) + LOWER(SUBSTRING(nombre_cliente, 2, LEN(nombre_cliente))) AS Cliente, genero AS Genero, CONVERT (date, fecha_alta, 0) AS Fecha_Alta, DATEDIFF(year, fecha_nacimiento, GETDATE()) AS Edad FROM CLIENTES";
+            this._commandCollection[0].CommandText = @"SELECT        UPPER(apellido_cliente) + ', ' + UPPER(LEFT(nombre_cliente, 1)) + LOWER(SUBSTRING(nombre_cliente, 2, LEN(nombre_cliente))) AS Cliente, CONVERT(date, fecha_alta, 0) AS Fecha_Alta, DATEDIFF(year, fecha_nacimiento, 
+                         GETDATE()) AS Edad, genero AS Genero
+FROM            CLIENTES";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

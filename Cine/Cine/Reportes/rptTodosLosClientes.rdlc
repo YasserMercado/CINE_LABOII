@@ -6,7 +6,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.89568cm</Width>
+              <Width>6.76323cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.89568cm</Width>
@@ -223,7 +223,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Edad]</Value>
+                              <Value>=Fields!Edad.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -293,7 +293,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Fecha_Alta]</Value>
+                              <Value>=Fields!Fecha_Alta.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -343,9 +343,9 @@
         </TablixRowHierarchy>
         <DataSetName>DSTodosLosClientes</DataSetName>
         <Top>1.29328cm</Top>
-        <Left>2.94661cm</Left>
+        <Left>1.52103cm</Left>
         <Height>1.49104cm</Height>
-        <Width>15.18583cm</Width>
+        <Width>18.05339cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -402,7 +402,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.90625cm</Top>
-          <Left>7.15979cm</Left>
+          <Left>7.50375cm</Left>
           <Height>1.05392cm</Height>
           <Width>5.9925cm</Width>
           <ZIndex>1</ZIndex>
@@ -423,7 +423,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>Todos los CLientes de CINEMA</Value>
                   <Style>
                     <FontFamily>Candara</FontFamily>
                     <Format>d</Format>
@@ -438,9 +438,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>2.45406cm</Top>
-          <Left>8.615cm</Left>
+          <Left>7.32846cm</Left>
           <Height>0.57354cm</Height>
-          <Width>3.16807cm</Width>
+          <Width>6.34307cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -508,7 +508,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>Falta llenar este cuadro de texto</Value>
                   <Style>
                     <FontFamily>Candara</FontFamily>
                     <Format>d</Format>

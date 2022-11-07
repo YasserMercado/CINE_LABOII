@@ -599,3 +599,5 @@ C:\Users\Valdez\OneDrive\Escritorio\CINE_LABOII\Cine\Cine\obj\Debug\Cine.csproj.
 C:\Users\Valdez\OneDrive\Escritorio\CINE_LABOII\Cine\Cine\obj\Debug\Cine.exe
 C:\Users\Valdez\OneDrive\Escritorio\CINE_LABOII\Cine\Cine\obj\Debug\Cine.pdb
 C:\Users\Valdez\OneDrive\Escritorio\CINE_LABOII\Cine\Cine\obj\Debug\Cine.Formularios.frmSugerenciasMejoras.resources
+C:\Users\usuario\Desktop\UTN\CINE_LABOII\Cine\Cine\obj\Debug\Cine.frmLogin.resources
+C:\Users\usuario\Desktop\UTN\CINE_LABOII\Cine\Cine\obj\Debug\Cine.Formularios.frmSugerenciasMejoras.resources

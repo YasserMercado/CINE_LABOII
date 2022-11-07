@@ -342,8 +342,8 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>2.07257cm</Top>
         <Left>3.95521cm</Left>
-        <Height>1.38521cm</Height>
-        <Width>11.40167cm</Width>
+        <Height>1.3852cm</Height>
+        <Width>11.40168cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -397,7 +397,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
           <Top>1.13454cm</Top>
-          <Left>3.95521cm</Left>
+          <Left>4.79917cm</Left>
           <Height>0.78521cm</Height>
           <Width>11.40167cm</Width>
           <Style>
@@ -417,7 +417,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>= Globals!ExecutionTime</Value>
+                  <Value>!!!!</Value>
                   <Style>
                     <Color>LightGrey</Color>
                   </Style>
@@ -430,7 +430,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>2.38718cm</Top>
-          <Left>7.86786cm</Left>
+          <Left>8.5917cm</Left>
           <Height>0.6cm</Height>
           <Width>3.81661cm</Width>
           <ZIndex>1</ZIndex>
@@ -479,7 +479,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>= "Página " &amp; Globals!PageNumber &amp; " de " &amp; Globals!TotalPages</Value>
+                  <Value>!!!!!</Value>
                   <Style>
                     <Color>LightGrey</Color>
                   </Style>

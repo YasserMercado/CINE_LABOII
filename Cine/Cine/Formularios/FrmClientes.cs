@@ -8,7 +8,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 
 namespace Cine.Formularios
 {
@@ -44,23 +43,23 @@ namespace Cine.Formularios
             this.reportViewer3.RefreshReport();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            EsconderReportes();
-            reportViewer3.Show();
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    EsconderReportes();
+        //    reportViewer3.Show();
+        //}
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            EsconderReportes();
-            reportViewer1.Show();
-        }
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    EsconderReportes();
+        //    reportViewer1.Show();
+        //}
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            EsconderReportes();
-            reportViewer2.Show();
-        }
+        //private void button3_Click(object sender, EventArgs e)
+        //{
+        //    EsconderReportes();
+        //    reportViewer2.Show();
+        //}
 
         private void FrmClientes_MouseDown(object sender, MouseEventArgs e)
         {
@@ -83,6 +82,18 @@ namespace Cine.Formularios
         {
             EsconderReportes();
             reportViewer3.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            EsconderReportes();
+            reportViewer1.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            EsconderReportes();
+            reportViewer2.Show();
         }
     }
 }

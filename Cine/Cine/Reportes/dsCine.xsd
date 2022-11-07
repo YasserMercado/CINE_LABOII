@@ -13,7 +13,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtRecurrentesTableAdapter" GeneratorDataComponentClassName="dtRecurrentesTableAdapter" Name="dtRecurrentes" UserDataComponentName="dtRecurrentesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="desktop-47s0gds.CINE_CORDOBA.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        c.nombre_cliente + ' ' + c.apellido_cliente AS Cliente, COUNT(*) AS Cantidad, MONTH(e.fecha_entrada) AS Mes, YEAR(e.fecha_entrada) AS Año
@@ -43,7 +43,7 @@ HAVING        (COUNT(*) &gt; 10)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtClasificaiconesMasVistasTableAdapter" GeneratorDataComponentClassName="dtClasificaiconesMasVistasTableAdapter" Name="dtClasificaiconesMasVistas" UserDataComponentName="dtClasificaiconesMasVistasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="desktop-47s0gds.CINE_CORDOBA.dbo" DbObjectName="CINE_CORDOBA.dbo.CLASIFICACIONES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectName="CINE_CORDOBA.dbo.CLASIFICACIONES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        c.clasificacion AS Clasificación, c.descripcion AS 'Descripción', COUNT(*) AS Concurrencia, 'Hace 3 meses ' AS Meses
@@ -79,7 +79,7 @@ ORDER BY 3, 2</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtClientesAgostoTableAdapter" GeneratorDataComponentClassName="dtClientesAgostoTableAdapter" Name="dtClientesAgosto" UserDataComponentName="dtClientesAgostoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="desktop-47s0gds.CINE_CORDOBA.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        SUM(en.id_cliente) AS Clientes, CONVERT(varchar, en.fecha_entrada, 103) AS Fecha
@@ -105,7 +105,7 @@ ORDER BY Fecha</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtMenos10ButacasTableAdapter" GeneratorDataComponentClassName="dtMenos10ButacasTableAdapter" Name="dtMenos10Butacas" UserDataComponentName="dtMenos10ButacasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="desktop-47s0gds.CINE_CORDOBA.dbo" DbObjectName="CINE_CORDOBA.dbo.PELICULAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectName="CINE_CORDOBA.dbo.PELICULAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        p.nombre_pelicula AS Pelicula, SUM(c.monto) AS Total, COUNT(ds.id_butaca) AS Butacas
@@ -135,7 +135,7 @@ HAVING        (SUM(c.monto) &gt;
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dsDescuentoTarjetaTableAdapter" GeneratorDataComponentClassName="dsDescuentoTarjetaTableAdapter" Name="dsDescuentoTarjeta" UserDataComponentName="dsDescuentoTarjetaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="desktop-47s0gds.CINE_CORDOBA.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        PEL.nombre_pelicula AS PELICULAS, CONVERT(varchar, ENT.fecha_entrada, 3) AS FECHA, CAST(DET.descuento AS varchar) + '%' AS DESCUENTO, COM.monto AS MONTO, COM.cantidad AS CANTIDAD
@@ -166,7 +166,7 @@ ORDER BY DESCUENTO</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dsButacasVipTableAdapter" GeneratorDataComponentClassName="dsButacasVipTableAdapter" Name="dsButacasVip" UserDataComponentName="dsButacasVipTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="desktop-47s0gds.CINE_CORDOBA.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        BUT.fila + CAST(BUT.numero AS varchar) AS BUTACA, CLI.nombre_cliente + ' ' + CLI.apellido_cliente AS CLINTE, COUNT(ENT.fecha_entrada) AS ASISTENCIAS
@@ -197,7 +197,7 @@ ORDER BY ASISTENCIAS DESC</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtRecaudacionSpielbergTableAdapter" GeneratorDataComponentClassName="dtRecaudacionSpielbergTableAdapter" Name="dtRecaudacionSpielberg" UserDataComponentName="dtRecaudacionSpielbergTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="desktop-47s0gds.CINE_CORDOBA.dbo" DbObjectName="CINE_CORDOBA.dbo.PELICULAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectName="CINE_CORDOBA.dbo.PELICULAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        SUM(c.monto) AS Recaudacion, p.nombre_pelicula
@@ -222,7 +222,7 @@ GROUP BY p.nombre_pelicula</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtVentaOnlineTableAdapter" GeneratorDataComponentClassName="dtVentaOnlineTableAdapter" Name="dtVentaOnline" UserDataComponentName="dtVentaOnlineTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="desktop-47s0gds.CINE_CORDOBA.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        SUM(c.monto) AS Total, 'Efectivo' AS Metodo
@@ -261,7 +261,7 @@ WHERE        (fp.forma_pago = 'Tarjeta Credito') AND (DATEDIFF(month, e.fecha_en
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtVentasxRangoTableAdapter" GeneratorDataComponentClassName="dtVentasxRangoTableAdapter" Name="dtVentasxRango" UserDataComponentName="dtVentasxRangoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="desktop-47s0gds.CINE_CORDOBA.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(E.id_entrada) AS ENTRADAS, 'DE 00:00 HS - 10:00 HS' AS RANGO
@@ -301,7 +301,7 @@ ORDER BY 1 DESC</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtTo5VendidasAgostoTableAdapter" GeneratorDataComponentClassName="dtTo5VendidasAgostoTableAdapter" Name="dtTo5VendidasAgosto" UserDataComponentName="dtTo5VendidasAgostoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="desktop-47s0gds.CINE_CORDOBA.dbo" DbObjectName="CINE_CORDOBA.dbo.PELICULAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectName="CINE_CORDOBA.dbo.PELICULAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        TOP (5) P.nombre_pelicula AS PELICULA, COUNT(*) AS VENDIDAS
@@ -326,10 +326,12 @@ ORDER BY VENDIDAS DESC</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtTodosLosClientesTableAdapter" GeneratorDataComponentClassName="dtTodosLosClientesTableAdapter" Name="dtTodosLosClientes" UserDataComponentName="dtTodosLosClientesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="desktop-47s0gds.CINE_CORDOBA.dbo" DbObjectName="CINE_CORDOBA.dbo.CLIENTES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectName="CINE_CORDOBA.dbo.CLIENTES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT UPPER(apellido_cliente) + ', ' + UPPER(LEFT (nombre_cliente, 1)) + LOWER(SUBSTRING(nombre_cliente, 2, LEN(nombre_cliente))) AS Cliente, genero AS Genero, CONVERT (date, fecha_alta, 0) AS Fecha_Alta, DATEDIFF(year, fecha_nacimiento, GETDATE()) AS Edad FROM CLIENTES</CommandText>
+                    <CommandText>SELECT        UPPER(apellido_cliente) + ', ' + UPPER(LEFT(nombre_cliente, 1)) + LOWER(SUBSTRING(nombre_cliente, 2, LEN(nombre_cliente))) AS Cliente, CONVERT(date, fecha_alta, 0) AS Fecha_Alta, DATEDIFF(year, fecha_nacimiento, 
+                         GETDATE()) AS Edad, genero AS Genero
+FROM            CLIENTES</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>

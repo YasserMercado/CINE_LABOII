@@ -11,12 +11,12 @@
     <Shape ID="DesignTable:dtClientesAgosto" ZOrder="9" X="13" Y="185" Height="115" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:dtMenos10Butacas" ZOrder="8" X="248" Y="192" Height="134" Width="207" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:dsDescuentoTarjeta" ZOrder="7" X="513" Y="8" Height="172" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:dsButacasVip" ZOrder="6" X="736" Y="12" Height="134" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
+    <Shape ID="DesignTable:dsButacasVip" ZOrder="6" X="736" Y="11" Height="134" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:dtRecaudacionSpielberg" ZOrder="5" X="480" Y="205" Height="115" Width="207" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:dtVentaOnline" ZOrder="4" X="716" Y="205" Height="115" Width="229" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="24" SplitterPosition="64" />
+    <Shape ID="DesignTable:dtVentaOnline" ZOrder="4" X="716" Y="204" Height="94" Width="229" AdapterExpanded="false" DataTableExpanded="true" OldAdapterHeight="45" OldDataTableHeight="24" SplitterPosition="64" />
     <Shape ID="DesignTable:dtVentasxRango" ZOrder="3" X="244" Y="357" Height="90" Width="230" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
     <Shape ID="DesignTable:dtTo5VendidasAgosto" ZOrder="2" X="11" Y="340" Height="90" Width="222" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:dtTodosLosClientes" ZOrder="1" X="520" Y="350" Height="153" Width="257" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
+    <Shape ID="DesignTable:dtTodosLosClientes" ZOrder="1" X="520" Y="350" Height="153" Width="257" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="102" />
   </Shapes>
   <Connectors />
 </DiagramLayout>

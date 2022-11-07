@@ -102,64 +102,64 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCine.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmButacasVip.cs">
+    <Compile Include="Reportes\Eliminar\frmButacasVip.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmButacasVip.Designer.cs">
+    <Compile Include="Reportes\Eliminar\frmButacasVip.Designer.cs">
       <DependentUpon>frmButacasVip.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmClasificacionesMasVistas.cs">
+    <Compile Include="Reportes\Eliminar\frmClasificacionesMasVistas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmClasificacionesMasVistas.Designer.cs">
+    <Compile Include="Reportes\Eliminar\frmClasificacionesMasVistas.Designer.cs">
       <DependentUpon>frmClasificacionesMasVistas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmClientesAgosto.cs">
+    <Compile Include="Reportes\Eliminar\frmClientesAgosto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmClientesAgosto.Designer.cs">
+    <Compile Include="Reportes\Eliminar\frmClientesAgosto.Designer.cs">
       <DependentUpon>frmClientesAgosto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmDescuentoTarjeta.cs">
+    <Compile Include="Reportes\Eliminar\frmDescuentoTarjeta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmDescuentoTarjeta.Designer.cs">
+    <Compile Include="Reportes\Eliminar\frmDescuentoTarjeta.Designer.cs">
       <DependentUpon>frmDescuentoTarjeta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmMenos10Butacas.cs">
+    <Compile Include="Reportes\Eliminar\frmMenos10Butacas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmMenos10Butacas.Designer.cs">
+    <Compile Include="Reportes\Eliminar\frmMenos10Butacas.Designer.cs">
       <DependentUpon>frmMenos10Butacas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmRecaudacionSpielberg.cs">
+    <Compile Include="Reportes\Eliminar\frmRecaudacionSpielberg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmRecaudacionSpielberg.Designer.cs">
+    <Compile Include="Reportes\Eliminar\frmRecaudacionSpielberg.Designer.cs">
       <DependentUpon>frmRecaudacionSpielberg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmRecurrentes.cs">
+    <Compile Include="Reportes\Eliminar\frmRecurrentes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmRecurrentes.Designer.cs">
+    <Compile Include="Reportes\Eliminar\frmRecurrentes.Designer.cs">
       <DependentUpon>frmRecurrentes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmTop5Agosto.cs">
+    <Compile Include="Reportes\Eliminar\frmTop5Agosto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmTop5Agosto.Designer.cs">
+    <Compile Include="Reportes\Eliminar\frmTop5Agosto.Designer.cs">
       <DependentUpon>frmTop5Agosto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmVentaOnline.cs">
+    <Compile Include="Reportes\Eliminar\frmVentaOnline.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmVentaOnline.Designer.cs">
+    <Compile Include="Reportes\Eliminar\frmVentaOnline.Designer.cs">
       <DependentUpon>frmVentaOnline.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmVentaxRango.cs">
+    <Compile Include="Reportes\Eliminar\frmVentaxRango.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\frmVentaxRango.Designer.cs">
+    <Compile Include="Reportes\Eliminar\frmVentaxRango.Designer.cs">
       <DependentUpon>frmVentaxRango.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -186,34 +186,34 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reportes\frmButacasVip.resx">
+    <EmbeddedResource Include="Reportes\Eliminar\frmButacasVip.resx">
       <DependentUpon>frmButacasVip.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmClasificacionesMasVistas.resx">
+    <EmbeddedResource Include="Reportes\Eliminar\frmClasificacionesMasVistas.resx">
       <DependentUpon>frmClasificacionesMasVistas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmClientesAgosto.resx">
+    <EmbeddedResource Include="Reportes\Eliminar\frmClientesAgosto.resx">
       <DependentUpon>frmClientesAgosto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmDescuentoTarjeta.resx">
+    <EmbeddedResource Include="Reportes\Eliminar\frmDescuentoTarjeta.resx">
       <DependentUpon>frmDescuentoTarjeta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmMenos10Butacas.resx">
+    <EmbeddedResource Include="Reportes\Eliminar\frmMenos10Butacas.resx">
       <DependentUpon>frmMenos10Butacas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmRecaudacionSpielberg.resx">
+    <EmbeddedResource Include="Reportes\Eliminar\frmRecaudacionSpielberg.resx">
       <DependentUpon>frmRecaudacionSpielberg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmRecurrentes.resx">
+    <EmbeddedResource Include="Reportes\Eliminar\frmRecurrentes.resx">
       <DependentUpon>frmRecurrentes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmTop5Agosto.resx">
+    <EmbeddedResource Include="Reportes\Eliminar\frmTop5Agosto.resx">
       <DependentUpon>frmTop5Agosto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmVentaOnline.resx">
+    <EmbeddedResource Include="Reportes\Eliminar\frmVentaOnline.resx">
       <DependentUpon>frmVentaOnline.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmVentaxRango.resx">
+    <EmbeddedResource Include="Reportes\Eliminar\frmVentaxRango.resx">
       <DependentUpon>frmVentaxRango.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptButacasVip.rdlc" />
