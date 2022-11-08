@@ -74,6 +74,12 @@
     <Compile Include="Formularios\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmFunciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmFunciones.Designer.cs">
+      <DependentUpon>FrmFunciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,24 @@
     </Compile>
     <Compile Include="Formularios\frmLogin.designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEntradas.Designer.cs">
+      <DependentUpon>FrmEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPeliculas.Designer.cs">
+      <DependentUpon>FrmPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmSalas.Designer.cs">
+      <DependentUpon>FrmSalas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmSugerenciasMejoras.cs">
       <SubType>Form</SubType>
@@ -168,11 +192,23 @@
     <EmbeddedResource Include="Formularios\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmFunciones.resx">
+      <DependentUpon>FrmFunciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEntradas.resx">
+      <DependentUpon>FrmEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPeliculas.resx">
+      <DependentUpon>FrmPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmSalas.resx">
+      <DependentUpon>FrmSalas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSugerenciasMejoras.resx">
       <DependentUpon>frmSugerenciasMejoras.cs</DependentUpon>
@@ -216,6 +252,7 @@
     <EmbeddedResource Include="Reportes\Eliminar\frmVentaxRango.resx">
       <DependentUpon>frmVentaxRango.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptClientesDeAgosto.rdlc" />
     <EmbeddedResource Include="Reportes\rptButacasVip.rdlc" />
     <EmbeddedResource Include="Reportes\rptClasificacionesMasVistas.rdlc" />
     <EmbeddedResource Include="Reportes\rptClientesAgosto.rdlc" />

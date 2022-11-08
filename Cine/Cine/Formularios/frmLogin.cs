@@ -62,8 +62,6 @@ namespace Cine
             }
         }
 
-       
-
         private void fmrLogin_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -89,8 +87,7 @@ namespace Cine
                         this.Hide();
                         frmHome home = new frmHome();
                         home.Show();
-                        home.FormClosed += Logout;
-                        
+                        home.FormClosed += Logout;                   
                     }
                     else
                     {
@@ -110,8 +107,6 @@ namespace Cine
             lblError.Visible = true;
         }
 
-      
-
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
@@ -130,7 +125,6 @@ namespace Cine
             txtUser.Clear();
             lblError.Visible = false;  
             txtUser.Focus();
-
         }
 
         private void btnCerrar_Click_1(object sender, EventArgs e)

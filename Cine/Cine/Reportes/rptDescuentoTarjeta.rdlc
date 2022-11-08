@@ -229,7 +229,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Peliculas]</Value>
+                              <Value>=Fields!PELICULAS.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -264,19 +264,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[</Value>
-                              <Style />
-                            </TextRun>
-                            <TextRun>
-                              <Value>[Fecha]</Value>
+                              <Value>=Fields!FECHA.Value</Value>
                               <Style>
-                                <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
                               </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value>]</Value>
-                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -307,7 +298,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Descuento]</Value>
+                              <Value>=Fields!DESCUENTO.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -342,7 +333,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Monto]</Value>
+                              <Value>=Fields!MONTO.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -377,7 +368,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Cantidad]</Value>
+                              <Value>=Fields!CANTIDAD.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -430,7 +421,7 @@
         <Top>1.94028cm</Top>
         <Left>2.7362cm</Left>
         <Height>1.5175cm</Height>
-        <Width>15.14583cm</Width>
+        <Width>15.14585cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -524,7 +515,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>!!!</Value>
                   <Style>
                     <FontFamily>Candara</FontFamily>
                     <Color>LightGrey</Color>
@@ -608,7 +599,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>!!!!</Value>
                   <Style>
                     <FontFamily>Candara</FontFamily>
                     <Color>LightGrey</Color>

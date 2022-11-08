@@ -25,79 +25,12 @@ namespace Cine
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         private void Form1_Load(object sender, EventArgs e)
         {
-        
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Reportes.frmClasificacionesMasVistas Clasificaciones = new Reportes.frmClasificacionesMasVistas();
-            Clasificaciones.ShowDialog();
-        }
-
-
-        private void button3_Click(object sender, EventArgs e)  //Hay que sacarlo
-        {
-            Reportes.frmClientesAgosto clientesAgosto = new Reportes.frmClientesAgosto();
-            clientesAgosto.ShowDialog();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Reportes.frmMenos10Butacas MenosButacas = new Reportes.frmMenos10Butacas();
-            MenosButacas.ShowDialog();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Reportes.frmDescuentoTarjeta descuento = new Reportes.frmDescuentoTarjeta();
-            descuento.ShowDialog();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Reportes.frmButacasVip butacasVip = new Reportes.frmButacasVip();
-            butacasVip.ShowDialog();    
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Reportes.frmRecaudacionSpielberg recaudacion = new Reportes.frmRecaudacionSpielberg();
-            recaudacion.ShowDialog();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Reportes.frmVentaOnline online = new Reportes.frmVentaOnline();
-            online.ShowDialog();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Reportes.frmVentaxRango rango = new Reportes.frmVentaxRango();
-            rango.ShowDialog();
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            Reportes.frmTop5Agosto rango = new Reportes.frmTop5Agosto();
-            rango.ShowDialog();
         }
 
         private void panel12_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            Formularios.FrmClientes clientes = new Formularios.FrmClientes();
-            clientes.ShowDialog();
         }
 
         private void frmHome_MouseDown(object sender, MouseEventArgs e)
@@ -124,27 +57,59 @@ namespace Cine
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+
+        //Cierra la aplicacion
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        //Sale al Login
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
-            
-
         }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-           
+        //Abre Form Mejoras
+        private void btnMejoras_Click(object sender, EventArgs e)
+        {   
             frmSugerenciasMejoras mejoras = new frmSugerenciasMejoras();
             mejoras.Show();
-        
-
         }
 
-        
+
+        //******************* BOTONES ********************
+        private void btnEntradas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Formularios.FrmEntradas form = new Formularios.FrmEntradas();
+            form.ShowDialog();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Formularios.FrmClientes form = new Formularios.FrmClientes();
+            form.ShowDialog();
+        }
+
+        private void btnFunciones_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Formularios.FrmFunciones form = new Formularios.FrmFunciones();
+            form.ShowDialog();
+        }
+
+        private void btnPeliculas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Formularios.FrmPeliculas form = new Formularios.FrmPeliculas();
+            form.ShowDialog();
+        }
+
+        private void btnSalas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Formularios.FrmSalas form = new Formularios.FrmSalas();
+            form.ShowDialog();
+        }
     }
 }

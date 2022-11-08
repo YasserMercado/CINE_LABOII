@@ -106,7 +106,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Nombre Pelicula]</Value>
+                              <Value>=Fields!nombre_pelicula.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -141,7 +141,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Recaudación]</Value>
+                              <Value>=Fields!Recaudacion.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -191,7 +191,7 @@
         <Top>1.61079cm</Top>
         <Left>5.09604cm</Left>
         <Height>1.49104cm</Height>
-        <Width>10.27875cm</Width>
+        <Width>10.27876cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -269,7 +269,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>!!!!</Value>
                   <Style>
                     <FontFamily>Candara</FontFamily>
                     <Color>LightGrey</Color>
@@ -353,7 +353,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>!!!!</Value>
                   <Style>
                     <FontFamily>Candara</FontFamily>
                     <Color>LightGrey</Color>

@@ -143,7 +143,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Pelicula]</Value>
+                              <Value>=Fields!Pelicula.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -178,7 +178,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Total]</Value>
+                              <Value>=Fields!Total.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -213,7 +213,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Butacas]</Value>
+                              <Value>=Fields!Butacas.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -263,8 +263,8 @@
         <DataSetName>dsMenos10Entradas</DataSetName>
         <Top>1.94028cm</Top>
         <Left>4.30229cm</Left>
-        <Height>1.64979cm</Height>
-        <Width>11.97208cm</Width>
+        <Height>1.6498cm</Height>
+        <Width>11.97207cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -342,7 +342,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>!!!!!!</Value>
                   <Style>
                     <Color>LightGrey</Color>
                   </Style>
@@ -425,7 +425,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>!!!!!!!!</Value>
                   <Style>
                     <Color>LightGrey</Color>
                   </Style>

@@ -79,10 +79,10 @@ ORDER BY 3, 2</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtClientesAgostoTableAdapter" GeneratorDataComponentClassName="dtClientesAgostoTableAdapter" Name="dtClientesAgosto" UserDataComponentName="dtClientesAgostoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        SUM(en.id_cliente) AS Clientes, CONVERT(varchar, en.fecha_entrada, 103) AS Fecha
+                    <CommandText>SELECT        SUM(en.id_cliente) AS ClIENTES, CONVERT(varchar, en.fecha_entrada, 103) AS FECHA
 FROM            ENTRADAS AS en INNER JOIN
                          CLIENTES AS c ON c.id_cliente = en.id_cliente INNER JOIN
                          FUNCIONES AS f ON f.id_funcion = en.id_funcion
@@ -90,16 +90,16 @@ WHERE        EXISTS
                              (SELECT        horario
                                FROM            HORARIOS_FUNCIONES
                                WHERE        (horario NOT BETWEEN '10:00:00' AND '16:00:00')) AND (en.fecha_entrada BETWEEN '08/01/2022' AND '08/31/2022')
-GROUP BY en.fecha_entrada
-ORDER BY Fecha</CommandText>
+GROUP BY en.fecha_entrada, CONVERT(varchar, en.fecha_entrada, 103)
+ORDER BY FECHA</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Clientes" DataSetColumn="Clientes" />
-              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="ClIENTES" DataSetColumn="ClIENTES" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -220,48 +220,9 @@ GROUP BY p.nombre_pelicula</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtVentaOnlineTableAdapter" GeneratorDataComponentClassName="dtVentaOnlineTableAdapter" Name="dtVentaOnline" UserDataComponentName="dtVentaOnlineTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        SUM(c.monto) AS Total, 'Efectivo' AS Metodo
-FROM            COMPROBANTES AS c INNER JOIN
-                         DETALLES_COMPROBANTES AS d ON c.id_detalle_comprobante = d.id_detalle_comprobante INNER JOIN
-                         FORMAS_PAGOS AS fp ON d.id_forma_pago = fp.id_forma_pago INNER JOIN
-                         FORMAS_COMPRAS AS fc ON c.id_forma_compra = fc.id_forma_compra INNER JOIN
-                         ENTRADAS AS e ON c.id_entrada = e.id_entrada
-WHERE        (fp.forma_pago = 'Efectivo') AND (DATEDIFF(month, e.fecha_entrada, GETDATE()) &lt;&gt; 0) AND (fc.descripcion LIKE 'No Presencial')
-UNION
-SELECT        SUM(c.monto) AS Total, 'Tarjeta Debito' AS Metodo
-FROM            COMPROBANTES AS c INNER JOIN
-                         DETALLES_COMPROBANTES AS d ON c.id_detalle_comprobante = d.id_detalle_comprobante INNER JOIN
-                         FORMAS_PAGOS AS fp ON d.id_forma_pago = fp.id_forma_pago INNER JOIN
-                         FORMAS_COMPRAS AS fc ON c.id_forma_compra = fc.id_forma_compra INNER JOIN
-                         ENTRADAS AS e ON c.id_entrada = e.id_entrada
-WHERE        (fp.forma_pago = 'Tarjeta Debito') AND (DATEDIFF(month, e.fecha_entrada, GETDATE()) &lt;&gt; 0) AND (fc.descripcion LIKE 'No Presencial')
-UNION
-SELECT        SUM(c.monto) AS Total, 'Tarjeta Credito' AS Metodo
-FROM            COMPROBANTES AS c INNER JOIN
-                         DETALLES_COMPROBANTES AS d ON c.id_detalle_comprobante = d.id_detalle_comprobante INNER JOIN
-                         FORMAS_PAGOS AS fp ON d.id_forma_pago = fp.id_forma_pago INNER JOIN
-                         FORMAS_COMPRAS AS fc ON c.id_forma_compra = fc.id_forma_compra INNER JOIN
-                         ENTRADAS AS e ON c.id_entrada = e.id_entrada
-WHERE        (fp.forma_pago = 'Tarjeta Credito') AND (DATEDIFF(month, e.fecha_entrada, GETDATE()) &lt;&gt; 0) AND (fc.descripcion LIKE 'No Presencial')</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="Metodo" DataSetColumn="Metodo" />
-              <Mapping SourceColumn="Total" DataSetColumn="Total" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtVentasxRangoTableAdapter" GeneratorDataComponentClassName="dtVentasxRangoTableAdapter" Name="dtVentasxRango" UserDataComponentName="dtVentasxRangoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(E.id_entrada) AS ENTRADAS, 'DE 00:00 HS - 10:00 HS' AS RANGO
@@ -345,6 +306,45 @@ FROM            CLIENTES</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtVentaOnlineTableAdapter" GeneratorDataComponentClassName="dtVentaOnlineTableAdapter" Name="dtVentaOnline" UserDataComponentName="dtVentaOnlineTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(c.monto) AS Total, 'Efectivo' AS Metodo
+FROM            COMPROBANTES AS c INNER JOIN
+                         DETALLES_COMPROBANTES AS d ON c.id_detalle_comprobante = d.id_detalle_comprobante INNER JOIN
+                         FORMAS_PAGOS AS fp ON d.id_forma_pago = fp.id_forma_pago INNER JOIN
+                         FORMAS_COMPRAS AS fc ON c.id_forma_compra = fc.id_forma_compra INNER JOIN
+                         ENTRADAS AS e ON c.id_entrada = e.id_entrada
+WHERE        (fp.forma_pago = 'Efectivo') AND (DATEDIFF(month, e.fecha_entrada, GETDATE()) &lt;&gt; 0) AND (fc.descripcion LIKE 'No Presencial')
+UNION
+SELECT        SUM(c.monto) AS Total, 'Tarjeta Debito' AS Metodo
+FROM            COMPROBANTES AS c INNER JOIN
+                         DETALLES_COMPROBANTES AS d ON c.id_detalle_comprobante = d.id_detalle_comprobante INNER JOIN
+                         FORMAS_PAGOS AS fp ON d.id_forma_pago = fp.id_forma_pago INNER JOIN
+                         FORMAS_COMPRAS AS fc ON c.id_forma_compra = fc.id_forma_compra INNER JOIN
+                         ENTRADAS AS e ON c.id_entrada = e.id_entrada
+WHERE        (fp.forma_pago = 'Tarjeta Debito') AND (DATEDIFF(month, e.fecha_entrada, GETDATE()) &lt;&gt; 0) AND (fc.descripcion LIKE 'No Presencial')
+UNION
+SELECT        SUM(c.monto) AS Total, 'Tarjeta Credito' AS Metodo
+FROM            COMPROBANTES AS c INNER JOIN
+                         DETALLES_COMPROBANTES AS d ON c.id_detalle_comprobante = d.id_detalle_comprobante INNER JOIN
+                         FORMAS_PAGOS AS fp ON d.id_forma_pago = fp.id_forma_pago INNER JOIN
+                         FORMAS_COMPRAS AS fc ON c.id_forma_compra = fc.id_forma_compra INNER JOIN
+                         ENTRADAS AS e ON c.id_entrada = e.id_entrada
+WHERE        (fp.forma_pago = 'Tarjeta Credito') AND (DATEDIFF(month, e.fecha_entrada, GETDATE()) &lt;&gt; 0) AND (fc.descripcion LIKE 'No Presencial')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="Metodo" DataSetColumn="Metodo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -400,8 +400,8 @@ FROM            CLIENTES</CommandText>
         <xs:element name="dtClientesAgosto" msprop:Generator_RowEvHandlerName="dtClientesAgostoRowChangeEventHandler" msprop:Generator_RowDeletedName="dtClientesAgostoRowDeleted" msprop:Generator_RowDeletingName="dtClientesAgostoRowDeleting" msprop:Generator_RowEvArgName="dtClientesAgostoRowChangeEvent" msprop:Generator_TablePropName="dtClientesAgosto" msprop:Generator_RowChangedName="dtClientesAgostoRowChanged" msprop:Generator_UserTableName="dtClientesAgosto" msprop:Generator_RowChangingName="dtClientesAgostoRowChanging" msprop:Generator_RowClassName="dtClientesAgostoRow" msprop:Generator_TableClassName="dtClientesAgostoDataTable" msprop:Generator_TableVarName="tabledtClientesAgosto">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Clientes" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="ClientesColumn" msprop:Generator_ColumnPropNameInRow="Clientes" msprop:Generator_UserColumnName="Clientes" msprop:Generator_ColumnVarNameInTable="columnClientes" type="xs:int" minOccurs="0" />
-              <xs:element name="Fecha" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" minOccurs="0">
+              <xs:element name="ClIENTES" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="ClIENTES" msprop:Generator_ColumnPropNameInTable="ClIENTESColumn" msprop:Generator_ColumnVarNameInTable="columnClIENTES" msprop:Generator_UserColumnName="ClIENTES" type="xs:int" minOccurs="0" />
+              <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
@@ -490,20 +490,6 @@ FROM            CLIENTES</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dtVentaOnline" msprop:Generator_RowEvHandlerName="dtVentaOnlineRowChangeEventHandler" msprop:Generator_RowDeletedName="dtVentaOnlineRowDeleted" msprop:Generator_RowDeletingName="dtVentaOnlineRowDeleting" msprop:Generator_RowEvArgName="dtVentaOnlineRowChangeEvent" msprop:Generator_TablePropName="dtVentaOnline" msprop:Generator_RowChangedName="dtVentaOnlineRowChanged" msprop:Generator_UserTableName="dtVentaOnline" msprop:Generator_RowChangingName="dtVentaOnlineRowChanging" msprop:Generator_RowClassName="dtVentaOnlineRow" msprop:Generator_TableClassName="dtVentaOnlineDataTable" msprop:Generator_TableVarName="tabledtVentaOnline">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Metodo" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="MetodoColumn" msprop:Generator_ColumnPropNameInRow="Metodo" msprop:Generator_UserColumnName="Metodo" msprop:Generator_ColumnVarNameInTable="columnMetodo" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_UserColumnName="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" type="xs:double" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="dtVentasxRango" msprop:Generator_RowEvHandlerName="dtVentasxRangoRowChangeEventHandler" msprop:Generator_RowDeletedName="dtVentasxRangoRowDeleted" msprop:Generator_RowDeletingName="dtVentasxRangoRowDeleting" msprop:Generator_RowEvArgName="dtVentasxRangoRowChangeEvent" msprop:Generator_TablePropName="dtVentasxRango" msprop:Generator_RowChangedName="dtVentasxRangoRowChanged" msprop:Generator_UserTableName="dtVentasxRango" msprop:Generator_RowChangingName="dtVentasxRangoRowChanging" msprop:Generator_RowClassName="dtVentasxRangoRow" msprop:Generator_TableClassName="dtVentasxRangoDataTable" msprop:Generator_TableVarName="tabledtVentasxRango">
           <xs:complexType>
             <xs:sequence>
@@ -551,6 +537,20 @@ FROM            CLIENTES</CommandText>
               </xs:element>
               <xs:element name="Fecha_Alta" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="Fecha_AltaColumn" msprop:Generator_ColumnPropNameInRow="Fecha_Alta" msprop:Generator_UserColumnName="Fecha_Alta" msprop:Generator_ColumnVarNameInTable="columnFecha_Alta" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Edad" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="EdadColumn" msprop:Generator_ColumnPropNameInRow="Edad" msprop:Generator_UserColumnName="Edad" msprop:Generator_ColumnVarNameInTable="columnEdad" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtVentaOnline" msprop:Generator_RowClassName="dtVentaOnlineRow" msprop:Generator_RowEvHandlerName="dtVentaOnlineRowChangeEventHandler" msprop:Generator_RowDeletedName="dtVentaOnlineRowDeleted" msprop:Generator_RowDeletingName="dtVentaOnlineRowDeleting" msprop:Generator_RowEvArgName="dtVentaOnlineRowChangeEvent" msprop:Generator_TablePropName="dtVentaOnline" msprop:Generator_RowChangedName="dtVentaOnlineRowChanged" msprop:Generator_UserTableName="dtVentaOnline" msprop:Generator_RowChangingName="dtVentaOnlineRowChanging" msprop:Generator_TableClassName="dtVentaOnlineDataTable" msprop:Generator_TableVarName="tabledtVentaOnline">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" type="xs:double" minOccurs="0" />
+              <xs:element name="Metodo" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Metodo" msprop:Generator_ColumnPropNameInTable="MetodoColumn" msprop:Generator_ColumnPropNameInRow="Metodo" msprop:Generator_ColumnVarNameInTable="columnMetodo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -31,42 +31,43 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClientes));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dtRecurrentesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsCine = new Cine.Reportes.dsCine();
-            this.dtClientesAgostoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dtTodosLosClientesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dtClientesAgostoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtClientesAgostoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dtTodosLosClientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dtTodosLosClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rptFrecuentes = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dtRecurrentesTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtRecurrentesTableAdapter();
-            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dtClientesAgostoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtClientesAgostoTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtClientesAgostoTableAdapter();
-            this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rptTodos = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dtTodosLosClientesTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtTodosLosClientesTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button3 = new Cine.Botones.buttonPersonalizado();
+            this.btnDeAgosto = new Cine.Botones.buttonPersonalizado();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button2 = new Cine.Botones.buttonPersonalizado();
+            this.btnFrecuentes = new Cine.Botones.buttonPersonalizado();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new Cine.Botones.buttonPersonalizado();
+            this.btnTodos = new Cine.Botones.buttonPersonalizado();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.rptClientesAgosto = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dtClientesAgostoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtRecurrentesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTodosLosClientesBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTodosLosClientesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTodosLosClientesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -74,6 +75,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // dtRecurrentesBindingSource
@@ -86,15 +88,20 @@
             this.dsCine.DataSetName = "dsCine";
             this.dsCine.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dtClientesAgostoBindingSource1
-            // 
-            this.dtClientesAgostoBindingSource1.DataMember = "dtClientesAgosto";
-            this.dtClientesAgostoBindingSource1.DataSource = this.dsCine;
-            // 
             // dtTodosLosClientesBindingSource2
             // 
             this.dtTodosLosClientesBindingSource2.DataMember = "dtTodosLosClientes";
             this.dtTodosLosClientesBindingSource2.DataSource = this.dsCine;
+            // 
+            // dtClientesAgostoBindingSource
+            // 
+            this.dtClientesAgostoBindingSource.DataMember = "dtClientesAgosto";
+            this.dtClientesAgostoBindingSource.DataSource = this.dsCine;
+            // 
+            // dtClientesAgostoBindingSource1
+            // 
+            this.dtClientesAgostoBindingSource1.DataMember = "dtClientesAgosto";
+            this.dtClientesAgostoBindingSource1.DataSource = this.dsCine;
             // 
             // dtTodosLosClientesBindingSource1
             // 
@@ -106,54 +113,37 @@
             this.dtTodosLosClientesBindingSource.DataMember = "dtTodosLosClientes";
             this.dtTodosLosClientesBindingSource.DataSource = this.dsCine;
             // 
-            // reportViewer1
+            // rptFrecuentes
             // 
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.dtRecurrentesBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptRecurrentes.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(256, 31);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(813, 564);
-            this.reportViewer1.TabIndex = 2;
+            this.rptFrecuentes.LocalReport.DataSources.Add(reportDataSource1);
+            this.rptFrecuentes.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptRecurrentes.rdlc";
+            this.rptFrecuentes.Location = new System.Drawing.Point(256, 31);
+            this.rptFrecuentes.Name = "rptFrecuentes";
+            this.rptFrecuentes.ServerReport.BearerToken = null;
+            this.rptFrecuentes.Size = new System.Drawing.Size(813, 564);
+            this.rptFrecuentes.TabIndex = 2;
             // 
             // dtRecurrentesTableAdapter
             // 
             this.dtRecurrentesTableAdapter.ClearBeforeFill = true;
             // 
-            // reportViewer2
-            // 
-            reportDataSource2.Name = "dsClientesAgosto";
-            reportDataSource2.Value = this.dtClientesAgostoBindingSource1;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer2.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptClientesAgosto.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(256, 31);
-            this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(813, 564);
-            this.reportViewer2.TabIndex = 5;
-            // 
-            // dtClientesAgostoBindingSource
-            // 
-            this.dtClientesAgostoBindingSource.DataMember = "dtClientesAgosto";
-            this.dtClientesAgostoBindingSource.DataSource = this.dsCine;
-            // 
             // dtClientesAgostoTableAdapter
             // 
             this.dtClientesAgostoTableAdapter.ClearBeforeFill = true;
             // 
-            // reportViewer3
+            // rptTodos
             // 
-            reportDataSource3.Name = "DSTodosLosClientes";
-            reportDataSource3.Value = this.dtTodosLosClientesBindingSource2;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer3.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptTodosLosClientes.rdlc";
-            this.reportViewer3.Location = new System.Drawing.Point(256, 31);
-            this.reportViewer3.Name = "reportViewer3";
-            this.reportViewer3.ServerReport.BearerToken = null;
-            this.reportViewer3.Size = new System.Drawing.Size(813, 564);
-            this.reportViewer3.TabIndex = 6;
+            reportDataSource2.Name = "DSTodosLosClientes";
+            reportDataSource2.Value = this.dtTodosLosClientesBindingSource2;
+            this.rptTodos.LocalReport.DataSources.Add(reportDataSource2);
+            this.rptTodos.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptTodosLosClientes.rdlc";
+            this.rptTodos.Location = new System.Drawing.Point(255, 31);
+            this.rptTodos.Name = "rptTodos";
+            this.rptTodos.ServerReport.BearerToken = null;
+            this.rptTodos.Size = new System.Drawing.Size(813, 564);
+            this.rptTodos.TabIndex = 6;
             // 
             // dtTodosLosClientesTableAdapter
             // 
@@ -189,7 +179,7 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button3);
+            this.panel8.Controls.Add(this.btnDeAgosto);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 300);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
@@ -197,29 +187,29 @@
             this.panel8.Size = new System.Drawing.Size(250, 53);
             this.panel8.TabIndex = 18;
             // 
-            // button3
+            // btnDeAgosto
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
-            this.button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.button3.BorderRadius = 3;
-            this.button3.BorderSize = 1;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(250, 53);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "DE AGOSTO";
-            this.button3.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.btnDeAgosto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnDeAgosto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnDeAgosto.BorderRadius = 3;
+            this.btnDeAgosto.BorderSize = 1;
+            this.btnDeAgosto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeAgosto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeAgosto.FlatAppearance.BorderSize = 0;
+            this.btnDeAgosto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnDeAgosto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnDeAgosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeAgosto.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnDeAgosto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnDeAgosto.Location = new System.Drawing.Point(0, 0);
+            this.btnDeAgosto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeAgosto.Name = "btnDeAgosto";
+            this.btnDeAgosto.Size = new System.Drawing.Size(250, 53);
+            this.btnDeAgosto.TabIndex = 12;
+            this.btnDeAgosto.Text = "DE AGOSTO";
+            this.btnDeAgosto.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnDeAgosto.UseVisualStyleBackColor = false;
+            this.btnDeAgosto.Click += new System.EventHandler(this.btnDeAgosto_Click);
             // 
             // panel7
             // 
@@ -232,7 +222,7 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button2);
+            this.panel6.Controls.Add(this.btnFrecuentes);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 235);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
@@ -240,29 +230,29 @@
             this.panel6.Size = new System.Drawing.Size(250, 53);
             this.panel6.TabIndex = 16;
             // 
-            // button2
+            // btnFrecuentes
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
-            this.button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.button2.BorderRadius = 3;
-            this.button2.BorderSize = 1;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 53);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "FRECUENTES";
-            this.button2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.btnFrecuentes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnFrecuentes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnFrecuentes.BorderRadius = 3;
+            this.btnFrecuentes.BorderSize = 1;
+            this.btnFrecuentes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFrecuentes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFrecuentes.FlatAppearance.BorderSize = 0;
+            this.btnFrecuentes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnFrecuentes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnFrecuentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFrecuentes.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnFrecuentes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnFrecuentes.Location = new System.Drawing.Point(0, 0);
+            this.btnFrecuentes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFrecuentes.Name = "btnFrecuentes";
+            this.btnFrecuentes.Size = new System.Drawing.Size(250, 53);
+            this.btnFrecuentes.TabIndex = 12;
+            this.btnFrecuentes.Text = "FRECUENTES";
+            this.btnFrecuentes.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnFrecuentes.UseVisualStyleBackColor = false;
+            this.btnFrecuentes.Click += new System.EventHandler(this.btnFrecuentes_Click);
             // 
             // panel5
             // 
@@ -275,7 +265,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnTodos);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 170);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
@@ -283,29 +273,29 @@
             this.panel4.Size = new System.Drawing.Size(250, 53);
             this.panel4.TabIndex = 14;
             // 
-            // button1
+            // btnTodos
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
-            this.button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.button1.BorderRadius = 3;
-            this.button1.BorderSize = 1;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 53);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "TODOS";
-            this.button1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnTodos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnTodos.BorderRadius = 3;
+            this.btnTodos.BorderSize = 1;
+            this.btnTodos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTodos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTodos.FlatAppearance.BorderSize = 0;
+            this.btnTodos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnTodos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTodos.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnTodos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnTodos.Location = new System.Drawing.Point(0, 0);
+            this.btnTodos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTodos.Name = "btnTodos";
+            this.btnTodos.Size = new System.Drawing.Size(250, 53);
+            this.btnTodos.TabIndex = 11;
+            this.btnTodos.Text = "TODOS";
+            this.btnTodos.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnTodos.UseVisualStyleBackColor = false;
+            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
             // panel3
             // 
@@ -349,16 +339,34 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // rptClientesAgosto
+            // 
+            this.rptClientesAgosto.DocumentMapWidth = 6;
+            reportDataSource3.Name = "dtsClientesDeAgosto";
+            reportDataSource3.Value = this.dtClientesAgostoBindingSource2;
+            this.rptClientesAgosto.LocalReport.DataSources.Add(reportDataSource3);
+            this.rptClientesAgosto.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptClientesDeAgosto.rdlc";
+            this.rptClientesAgosto.Location = new System.Drawing.Point(255, 31);
+            this.rptClientesAgosto.Name = "rptClientesAgosto";
+            this.rptClientesAgosto.ServerReport.BearerToken = null;
+            this.rptClientesAgosto.Size = new System.Drawing.Size(814, 564);
+            this.rptClientesAgosto.TabIndex = 10;
+            // 
+            // dtClientesAgostoBindingSource2
+            // 
+            this.dtClientesAgostoBindingSource2.DataMember = "dtClientesAgosto";
+            this.dtClientesAgostoBindingSource2.DataSource = this.dsCine;
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1075, 601);
+            this.Controls.Add(this.rptClientesAgosto);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.reportViewer3);
-            this.Controls.Add(this.reportViewer2);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.rptTodos);
+            this.Controls.Add(this.rptFrecuentes);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmClientes";
@@ -369,11 +377,11 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmClientes_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dtRecurrentesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTodosLosClientesBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTodosLosClientesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTodosLosClientesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -382,37 +390,39 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtClientesAgostoBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer rptFrecuentes;
         private Reportes.dsCine dsCine;
         private System.Windows.Forms.BindingSource dtRecurrentesBindingSource;
         private Reportes.dsCineTableAdapters.dtRecurrentesTableAdapter dtRecurrentesTableAdapter;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
         private System.Windows.Forms.BindingSource dtClientesAgostoBindingSource;
         private System.Windows.Forms.BindingSource dtClientesAgostoBindingSource1;
         private Reportes.dsCineTableAdapters.dtClientesAgostoTableAdapter dtClientesAgostoTableAdapter;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
+        private Microsoft.Reporting.WinForms.ReportViewer rptTodos;
         private System.Windows.Forms.BindingSource dtTodosLosClientesBindingSource;
         private System.Windows.Forms.BindingSource dtTodosLosClientesBindingSource1;
         private Reportes.dsCineTableAdapters.dtTodosLosClientesTableAdapter dtTodosLosClientesTableAdapter;
         private System.Windows.Forms.Panel panel1;
-        private Botones.buttonPersonalizado button1;
+        private Botones.buttonPersonalizado btnTodos;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel8;
-        private Botones.buttonPersonalizado button3;
+        private Botones.buttonPersonalizado btnDeAgosto;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
-        private Botones.buttonPersonalizado button2;
+        private Botones.buttonPersonalizado btnFrecuentes;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.BindingSource dtTodosLosClientesBindingSource2;
+        private Microsoft.Reporting.WinForms.ReportViewer rptClientesAgosto;
+        private System.Windows.Forms.BindingSource dtClientesAgostoBindingSource2;
     }
 }

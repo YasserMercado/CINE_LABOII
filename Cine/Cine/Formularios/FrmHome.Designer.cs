@@ -42,13 +42,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnMejoras = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.PictureBox();
             this.btnSalas = new Cine.Botones.buttonPersonalizado();
             this.btnPeliculas = new Cine.Botones.buttonPersonalizado();
             this.btnFunciones = new Cine.Botones.buttonPersonalizado();
             this.btnEntradas = new Cine.Botones.buttonPersonalizado();
-            this.button1 = new Cine.Botones.buttonPersonalizado();
+            this.btnClientes = new Cine.Botones.buttonPersonalizado();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtRecurrentesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
@@ -56,19 +56,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMejoras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.SuspendLayout();
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(26, 2);
+            this.button10.Location = new System.Drawing.Point(0, 0);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(176, 28);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "Mas Vendidas Agosto";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 0;
             // 
             // panel11
             // 
@@ -154,15 +151,15 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.panel12.Controls.Add(this.pictureBox3);
-            this.panel12.Controls.Add(this.pictureBox2);
+            this.panel12.Controls.Add(this.btnMejoras);
+            this.panel12.Controls.Add(this.btnLogout);
             this.panel12.Controls.Add(this.btnCerrar);
             this.panel12.Controls.Add(this.label1);
             this.panel12.Controls.Add(this.btnSalas);
             this.panel12.Controls.Add(this.btnPeliculas);
             this.panel12.Controls.Add(this.btnFunciones);
             this.panel12.Controls.Add(this.btnEntradas);
-            this.panel12.Controls.Add(this.button1);
+            this.panel12.Controls.Add(this.btnClientes);
             this.panel12.Controls.Add(this.panel1);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(0, 0);
@@ -173,29 +170,29 @@
             this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel12_Paint);
             this.panel12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseDown);
             // 
-            // pictureBox3
+            // btnMejoras
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(292, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 31);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.btnMejoras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMejoras.Image = ((System.Drawing.Image)(resources.GetObject("btnMejoras.Image")));
+            this.btnMejoras.Location = new System.Drawing.Point(292, 7);
+            this.btnMejoras.Name = "btnMejoras";
+            this.btnMejoras.Size = new System.Drawing.Size(35, 31);
+            this.btnMejoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMejoras.TabIndex = 8;
+            this.btnMejoras.TabStop = false;
+            this.btnMejoras.Click += new System.EventHandler(this.btnMejoras_Click);
             // 
-            // pictureBox2
+            // btnLogout
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(255, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(255, 7);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(31, 31);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLogout.TabIndex = 14;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnSalas
             // 
@@ -218,6 +215,7 @@
             this.btnSalas.Text = "SALAS";
             this.btnSalas.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
             this.btnSalas.UseVisualStyleBackColor = false;
+            this.btnSalas.Click += new System.EventHandler(this.btnSalas_Click);
             // 
             // btnPeliculas
             // 
@@ -240,6 +238,7 @@
             this.btnPeliculas.Text = "PELICULAS";
             this.btnPeliculas.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
             this.btnPeliculas.UseVisualStyleBackColor = false;
+            this.btnPeliculas.Click += new System.EventHandler(this.btnPeliculas_Click);
             // 
             // btnFunciones
             // 
@@ -262,6 +261,7 @@
             this.btnFunciones.Text = "FUNCIONES";
             this.btnFunciones.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
             this.btnFunciones.UseVisualStyleBackColor = false;
+            this.btnFunciones.Click += new System.EventHandler(this.btnFunciones_Click);
             // 
             // btnEntradas
             // 
@@ -284,29 +284,30 @@
             this.btnEntradas.Text = "ENTRADAS";
             this.btnEntradas.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
             this.btnEntradas.UseVisualStyleBackColor = false;
+            this.btnEntradas.Click += new System.EventHandler(this.btnEntradas_Click);
             // 
-            // button1
+            // btnClientes
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
-            this.button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.button1.BorderRadius = 3;
-            this.button1.BorderSize = 1;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.button1.Location = new System.Drawing.Point(290, 206);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 106);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "CLIENTES";
-            this.button1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnClientes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnClientes.BorderRadius = 3;
+            this.btnClientes.BorderSize = 1;
+            this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnClientes.Location = new System.Drawing.Point(290, 206);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(135, 106);
+            this.btnClientes.TabIndex = 7;
+            this.btnClientes.Text = "CLIENTES";
+            this.btnClientes.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // frmHome
             // 
@@ -332,8 +333,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMejoras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,7 +349,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Botones.buttonPersonalizado button1;
+        private Botones.buttonPersonalizado btnClientes;
         private Botones.buttonPersonalizado btnEntradas;
         private Botones.buttonPersonalizado btnFunciones;
         private Botones.buttonPersonalizado btnPeliculas;
@@ -356,8 +357,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox btnLogout;
+        private System.Windows.Forms.PictureBox btnMejoras;
     }
 }
 

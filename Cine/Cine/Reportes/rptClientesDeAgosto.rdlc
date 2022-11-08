@@ -6,15 +6,15 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>5.56917cm</Width>
+              <Width>5.01354cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.56917cm</Width>
+              <Width>5.01354cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.8249cm</Height>
+              <Height>0.86458cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -25,7 +25,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Pelicula</Value>
+                              <Value>CLIENTES</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <FontSize>14pt</FontSize>
@@ -63,7 +63,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Vendidas</Value>
+                              <Value>FECHA</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <FontSize>14pt</FontSize>
@@ -95,18 +95,18 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.8249cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PELICULA">
+                    <Textbox Name="ClIENTES">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PELICULA.Value</Value>
+                              <Value>=Fields!ClIENTES.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -118,7 +118,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PELICULA</rd:DefaultName>
+                      <rd:DefaultName>ClIENTES</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -134,14 +134,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="VENDIDAS">
+                    <Textbox Name="FECHA">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!VENDIDAS.Value</Value>
+                              <Value>=Fields!FECHA.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -153,7 +153,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>VENDIDAS</rd:DefaultName>
+                      <rd:DefaultName>FECHA</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -165,7 +165,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -188,11 +187,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsTop5VendidasAgosto</DataSetName>
-        <Top>1.53141cm</Top>
-        <Left>4.94453cm</Left>
-        <Height>1.6498cm</Height>
-        <Width>11.13834cm</Width>
+        <DataSetName>dtsClientesDeAgosto</DataSetName>
+        <Top>1.84891cm</Top>
+        <Left>6.02933cm</Left>
+        <Height>1.46458cm</Height>
+        <Width>10.02708cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -208,7 +207,7 @@
   <Width>21cm</Width>
   <Page>
     <PageHeader>
-      <Height>4.00995cm</Height>
+      <Height>4cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -216,8 +215,8 @@
           <Source>Embedded</Source>
           <Value>Logo2</Value>
           <Sizing>Fit</Sizing>
-          <Top>0.22231cm</Top>
-          <Left>17.3219cm</Left>
+          <Top>0.26822cm</Top>
+          <Left>17.13669cm</Left>
           <Height>3.55539cm</Height>
           <Width>2.91911cm</Width>
           <Style>
@@ -226,30 +225,14 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox2">
+        <Textbox Name="Textbox4">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Top 5 Peliculas mas Vendidas </Value>
-                  <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <FontSize>16pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <Color>LightGrey</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>en el mes de Agosto</Value>
+                  <Value>Clientes del Mes de Agosto</Value>
                   <Style>
                     <FontFamily>Candara</FontFamily>
                     <FontSize>16pt</FontSize>
@@ -263,11 +246,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.58875cm</Top>
-          <Left>4.62073cm</Left>
-          <Height>1.68479cm</Height>
-          <Width>10.69484cm</Width>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>0.97239cm</Top>
+          <Left>5.69136cm</Left>
+          <Height>0.99688cm</Height>
+          <Width>9.61729cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -279,16 +262,16 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox6">
+        <Textbox Name="Textbox5">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!!</Value>
+                  <Value>!!!!</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
+                    <Format>d</Format>
                     <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
@@ -298,9 +281,9 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>2.69558cm</Top>
-          <Left>8.86037cm</Left>
+          <rd:DefaultName>Textbox5</rd:DefaultName>
+          <Top>2.46729cm</Top>
+          <Left>9.25cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>2</ZIndex>
@@ -327,7 +310,7 @@
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox4">
+        <Textbox Name="Textbox7">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -349,8 +332,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>1.70259cm</Top>
-          <Left>0.42615cm</Left>
+          <Top>1.0626cm</Top>
+          <Left>0.66823cm</Left>
           <Height>0.94396cm</Height>
           <Width>3.10854cm</Width>
           <Style>
@@ -363,16 +346,16 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox7">
+        <Textbox Name="Textbox6">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!!!!</Value>
+                  <Value>!!!!</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
+                    <Format>d</Format>
                     <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
@@ -382,11 +365,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>1.70259cm</Top>
-          <Left>10.5137cm</Left>
+          <rd:DefaultName>Textbox5</rd:DefaultName>
+          <Top>1.7001cm</Top>
+          <Left>10.47055cm</Left>
           <Height>0.94396cm</Height>
-          <Width>10.1263cm</Width>
+          <Width>10.2189cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -422,32 +405,32 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>deff7f40-eb11-4696-962a-6b6346bb0738</rd:DataSourceID>
+      <rd:DataSourceID>d001ab74-c616-4859-97c2-89be2f5562fd</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="dsTop5VendidasAgosto">
+    <DataSet Name="dtsClientesDeAgosto">
       <Query>
         <DataSourceName>dsCine</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="PELICULA">
-          <DataField>PELICULA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="VENDIDAS">
-          <DataField>VENDIDAS</DataField>
+        <Field Name="ClIENTES">
+          <DataField>ClIENTES</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FECHA">
+          <DataField>FECHA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsCine</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Valdez\OneDrive\Escritorio\Cine\Cine\Reportes\dsCine.xsd</rd:SchemaPath>
-        <rd:TableName>dtTo5VendidasAgosto</rd:TableName>
+        <rd:SchemaPath>C:\Users\usuario\Desktop\UTN\CINE_LABOII\Cine\Cine\Reportes\dsCine.xsd</rd:SchemaPath>
+        <rd:TableName>dtClientesAgosto</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>dtTo5VendidasAgostoTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>dtClientesAgostoTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -568,5 +551,5 @@ dZQ3lkMt0acIIYQQQgghhBAyICjQ/CZc7y5u7D71/KCtlN5qNcMGBZt79DFCCCGEEEIIIYRcwXbRLdCs
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>c44aa7f9-1892-49e0-a984-686a1cd3ac6f</rd:ReportID>
+  <rd:ReportID>ce4e6dfc-66a1-4346-aafa-cc160bab18a5</rd:ReportID>
 </Report>

@@ -106,7 +106,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Rango]</Value>
+                              <Value>=Fields!RANGO.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -141,7 +141,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Entradas]</Value>
+                              <Value>=Fields!ENTRADAS.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -269,7 +269,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>!!!</Value>
                   <Style>
                     <FontFamily>candara</FontFamily>
                     <Color>LightGrey</Color>
@@ -353,7 +353,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>1!!!</Value>
                   <Style>
                     <FontFamily>candara</FontFamily>
                     <Color>LightGrey</Color>

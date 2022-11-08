@@ -147,7 +147,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Butaca]</Value>
+                              <Value>=Fields!BUTACA.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -182,7 +182,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Cliente]</Value>
+                              <Value>=Fields!CLINTE.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -217,7 +217,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>[Asistencias]</Value>
+                              <Value>=Fields!ASISTENCIAS.Value</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <Color>White</Color>
@@ -346,7 +346,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>!!!!</Value>
                   <Style>
                     <Color>LightGrey</Color>
                   </Style>
@@ -393,7 +393,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=</Value>
+                  <Value>!!!!!!</Value>
                   <Style>
                     <Color>LightGrey</Color>
                   </Style>
