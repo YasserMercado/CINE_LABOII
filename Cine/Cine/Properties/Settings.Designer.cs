@@ -26,42 +26,11 @@ namespace Cine.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-47S0GDS;Initial Catalog=CINE_CORDOBA;Integrated Security=True" +
-            "")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=GONZALOJC\\SQLEXPRESS;Initial Catalog=CINE_CORDOBA;Integrated Security" +
+            "=True")]
         public string CINE_CORDOBAConnectionString {
             get {
                 return ((string)(this["CINE_CORDOBAConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-RD7RILQ\\SQLEXPRESS;Initial Catalog=CINE_CORDOBA;Integrated Se" +
-            "curity=True")]
-        public string CINE_CORDOBAConnectionString1 {
-            get {
-                return ((string)(this["CINE_CORDOBAConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Integrated Security=True")]
-        public string ConnectionString {
-            get {
-                return ((string)(this["ConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=CINE_CORDOBA;Integrated Security=True")]
-        public string CINE_CORDOBAConnectionString2 {
-            get {
-                return ((string)(this["CINE_CORDOBAConnectionString2"]));
             }
         }
     }
