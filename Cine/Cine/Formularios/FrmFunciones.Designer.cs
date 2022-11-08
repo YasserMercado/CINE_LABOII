@@ -34,18 +34,20 @@
             this.dtTo5VendidasAgostoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsCine = new Cine.Reportes.dsCine();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnDescuentoTarjeta = new Cine.Botones.buttonPersonalizado();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.dtTo5VendidasAgostoTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtTo5VendidasAgostoTableAdapter();
             this.rptTop5Agosto = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.btnDescuentoTarjeta = new Cine.Botones.buttonPersonalizado();
             ((System.ComponentModel.ISupportInitialize)(this.dtTo5VendidasAgostoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,6 +67,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
@@ -74,6 +77,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 601);
             this.panel1.TabIndex = 9;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(89, 486);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(65, 71);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLogout.TabIndex = 22;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // label2
             // 
@@ -96,30 +112,6 @@
             this.panel4.Size = new System.Drawing.Size(250, 53);
             this.panel4.TabIndex = 14;
             // 
-            // btnDescuentoTarjeta
-            // 
-            this.btnDescuentoTarjeta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
-            this.btnDescuentoTarjeta.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnDescuentoTarjeta.BorderRadius = 3;
-            this.btnDescuentoTarjeta.BorderSize = 1;
-            this.btnDescuentoTarjeta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDescuentoTarjeta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDescuentoTarjeta.FlatAppearance.BorderSize = 0;
-            this.btnDescuentoTarjeta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
-            this.btnDescuentoTarjeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.btnDescuentoTarjeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDescuentoTarjeta.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btnDescuentoTarjeta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnDescuentoTarjeta.Location = new System.Drawing.Point(0, 0);
-            this.btnDescuentoTarjeta.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDescuentoTarjeta.Name = "btnDescuentoTarjeta";
-            this.btnDescuentoTarjeta.Size = new System.Drawing.Size(250, 53);
-            this.btnDescuentoTarjeta.TabIndex = 11;
-            this.btnDescuentoTarjeta.Text = "Top 5 De Agosto";
-            this.btnDescuentoTarjeta.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnDescuentoTarjeta.UseVisualStyleBackColor = false;
-            this.btnDescuentoTarjeta.Click += new System.EventHandler(this.btnDescuentoTarjeta_Click);
-            // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -138,6 +130,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 146);
             this.panel2.TabIndex = 12;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // pictureBox1
             // 
@@ -178,6 +171,30 @@
             this.rptTop5Agosto.Size = new System.Drawing.Size(813, 564);
             this.rptTop5Agosto.TabIndex = 21;
             // 
+            // btnDescuentoTarjeta
+            // 
+            this.btnDescuentoTarjeta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnDescuentoTarjeta.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnDescuentoTarjeta.BorderRadius = 3;
+            this.btnDescuentoTarjeta.BorderSize = 1;
+            this.btnDescuentoTarjeta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDescuentoTarjeta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDescuentoTarjeta.FlatAppearance.BorderSize = 0;
+            this.btnDescuentoTarjeta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnDescuentoTarjeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnDescuentoTarjeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDescuentoTarjeta.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnDescuentoTarjeta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnDescuentoTarjeta.Location = new System.Drawing.Point(0, 0);
+            this.btnDescuentoTarjeta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDescuentoTarjeta.Name = "btnDescuentoTarjeta";
+            this.btnDescuentoTarjeta.Size = new System.Drawing.Size(250, 53);
+            this.btnDescuentoTarjeta.TabIndex = 11;
+            this.btnDescuentoTarjeta.Text = "Top 5 De Agosto";
+            this.btnDescuentoTarjeta.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnDescuentoTarjeta.UseVisualStyleBackColor = false;
+            this.btnDescuentoTarjeta.Click += new System.EventHandler(this.btnDescuentoTarjeta_Click);
+            // 
             // FrmFunciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,14 +205,17 @@
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmFunciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFunciones";
             this.Load += new System.EventHandler(this.FrmFunciones_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmFunciones_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dtTo5VendidasAgostoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -218,5 +238,6 @@
         private System.Windows.Forms.BindingSource dtTo5VendidasAgostoBindingSource;
         private Reportes.dsCineTableAdapters.dtTo5VendidasAgostoTableAdapter dtTo5VendidasAgostoTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer rptTop5Agosto;
+        private System.Windows.Forms.PictureBox btnLogout;
     }
 }

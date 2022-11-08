@@ -389,7 +389,7 @@
                   <Value>Clasificaciones mas Vistas</Value>
                   <Style>
                     <FontFamily>candara</FontFamily>
-                    <FontSize>18pt</FontSize>
+                    <FontSize>24pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Color>LightGrey</Color>
                   </Style>
@@ -401,10 +401,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>1.16099cm</Top>
-          <Left>6.45266cm</Left>
-          <Height>0.9175cm</Height>
-          <Width>7.76521cm</Width>
+          <Top>0.84349cm</Top>
+          <Left>5.4737cm</Left>
+          <Height>1.12917cm</Height>
+          <Width>10.52918cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -416,15 +416,16 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox2">
+        <Textbox Name="Textbox5">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!!!!!!!</Value>
+                  <Value>Para conocer a nuestros clientes</Value>
                   <Style>
+                    <FontSize>18pt</FontSize>
                     <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
@@ -434,11 +435,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>2.40453cm</Top>
-          <Left>9.23078cm</Left>
-          <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>2.4475cm</Top>
+          <Left>5.89626cm</Left>
+          <Height>0.98624cm</Height>
+          <Width>9.46264cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>

@@ -374,17 +374,31 @@
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox7">
+        <Image Name="imgLogo">
+          <Source>Embedded</Source>
+          <Value>Logo2</Value>
+          <Sizing>Fit</Sizing>
+          <Top>0.22231cm</Top>
+          <Left>16.9473cm</Left>
+          <Height>3.55539cm</Height>
+          <Width>3.07786cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox2">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Clientes Frecuentes del Mes Pasado</Value>
+                  <Value>Clientes Frecuentes</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <FontSize>16pt</FontSize>
+                    <FontFamily>candara</FontFamily>
+                    <FontSize>24pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Color>LightGrey</Color>
                   </Style>
@@ -395,44 +409,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>1.13454cm</Top>
-          <Left>4.79917cm</Left>
-          <Height>0.78521cm</Height>
-          <Width>11.40167cm</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox2">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>!!!!</Value>
-                  <Style>
-                    <Color>LightGrey</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>2.38718cm</Top>
-          <Left>8.5917cm</Left>
-          <Height>0.6cm</Height>
-          <Width>3.81661cm</Width>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.70488cm</Top>
+          <Left>5.23541cm</Left>
+          <Height>1.12917cm</Height>
+          <Width>10.52918cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -444,21 +425,41 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Image Name="imgLogo">
-          <Source>Embedded</Source>
-          <Value>Logo2</Value>
-          <Sizing>Fit</Sizing>
-          <Top>0.22231cm</Top>
-          <Left>16.9473cm</Left>
-          <Height>3.55539cm</Height>
-          <Width>3.07786cm</Width>
+        <Textbox Name="Textbox9">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Clientes que compraron más de 10 entradas en un mes</Value>
+                  <Style>
+                    <FontSize>18pt</FontSize>
+                    <Color>LightGrey</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>2.30888cm</Top>
+          <Left>5.65797cm</Left>
+          <Height>1.46882cm</Height>
+          <Width>9.46264cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
           </Style>
-        </Image>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
@@ -543,6 +544,7 @@
           </Style>
         </Textbox>
         <Line Name="Line3">
+          <Top>0cm</Top>
           <Height>0cm</Height>
           <Width>18.74224cm</Width>
           <ZIndex>2</ZIndex>

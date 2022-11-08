@@ -462,26 +462,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Descuentos con Tarjetas</Value>
+                  <Value>Descuentos Tarjeta</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <FontSize>16pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <Color>LightGrey</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Activos</Value>
-                  <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <FontSize>16pt</FontSize>
+                    <FontFamily>candara</FontFamily>
+                    <FontSize>24pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Color>LightGrey</Color>
                   </Style>
@@ -493,10 +477,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.72104cm</Top>
-          <Left>4.57412cm</Left>
-          <Height>1.71125cm</Height>
-          <Width>10.27875cm</Width>
+          <Top>0.63207cm</Top>
+          <Left>5.01399cm</Left>
+          <Height>1.12917cm</Height>
+          <Width>10.52918cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -515,9 +499,9 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!</Value>
+                  <Value>Descuentos Realizados</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
+                    <FontSize>18pt</FontSize>
                     <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
@@ -527,11 +511,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>2.87326cm</Top>
-          <Left>8.17245cm</Left>
-          <Height>0.57354cm</Height>
-          <Width>3.29375cm</Width>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>2.23607cm</Top>
+          <Left>5.43655cm</Left>
+          <Height>0.98624cm</Height>
+          <Width>9.46264cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>

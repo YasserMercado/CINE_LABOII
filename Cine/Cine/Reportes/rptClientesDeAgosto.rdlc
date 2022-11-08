@@ -225,17 +225,17 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox4">
+        <Textbox Name="Textbox2">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Clientes del Mes de Agosto</Value>
+                  <Value>Clientes De Agosto</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <FontSize>16pt</FontSize>
+                    <FontFamily>candara</FontFamily>
+                    <FontSize>24pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Color>LightGrey</Color>
                   </Style>
@@ -246,11 +246,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>0.97239cm</Top>
-          <Left>5.69136cm</Left>
-          <Height>0.99688cm</Height>
-          <Width>9.61729cm</Width>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.70488cm</Top>
+          <Left>5.23541cm</Left>
+          <Height>1.12917cm</Height>
+          <Width>10.52918cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -269,9 +269,9 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!</Value>
+                  <Value>Nuestros Primeros Clientes</Value>
                   <Style>
-                    <Format>d</Format>
+                    <FontSize>18pt</FontSize>
                     <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
@@ -281,11 +281,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>2.46729cm</Top>
-          <Left>9.25cm</Left>
-          <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>2.30888cm</Top>
+          <Left>5.65797cm</Left>
+          <Height>0.98624cm</Height>
+          <Width>9.46264cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>

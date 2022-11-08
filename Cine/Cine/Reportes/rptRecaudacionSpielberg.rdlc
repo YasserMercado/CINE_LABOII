@@ -232,10 +232,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Recaudaciones de Spielberg</Value>
+                  <Value>Recaudación Spilberg</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <FontSize>16pt</FontSize>
+                    <FontFamily>candara</FontFamily>
+                    <FontSize>24pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Color>LightGrey</Color>
                   </Style>
@@ -247,10 +247,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>1.01209cm</Top>
-          <Left>5.09604cm</Left>
-          <Height>0.86458cm</Height>
-          <Width>10.27875cm</Width>
+          <Top>0.70488cm</Top>
+          <Left>5.23541cm</Left>
+          <Height>1.12917cm</Height>
+          <Width>10.52918cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -262,16 +262,16 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox6">
+        <Textbox Name="Textbox8">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!</Value>
+                  <Value>Ingresos por peliculas de Spilberg</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
+                    <FontSize>18pt</FontSize>
                     <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
@@ -281,11 +281,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>2.32516cm</Top>
-          <Left>8.99266cm</Left>
-          <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>2.30888cm</Top>
+          <Left>4.07047cm</Left>
+          <Height>0.98624cm</Height>
+          <Width>12.95514cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>

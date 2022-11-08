@@ -312,7 +312,7 @@
                   <Value>Butacas Vip</Value>
                   <Style>
                     <FontFamily>Candara</FontFamily>
-                    <FontSize>18pt</FontSize>
+                    <FontSize>24pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Color>LightGrey</Color>
                   </Style>
@@ -324,10 +324,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.13453cm</Top>
-          <Left>8.43231cm</Left>
-          <Height>0.97042cm</Height>
-          <Width>4.11396cm</Width>
+          <Top>0.84349cm</Top>
+          <Left>7.82377cm</Left>
+          <Height>1.26146cm</Height>
+          <Width>5.56917cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -346,8 +346,9 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!</Value>
+                  <Value>Butacas más solicitadas</Value>
                   <Style>
+                    <FontSize>18pt</FontSize>
                     <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
@@ -358,10 +359,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>2.52688cm</Top>
-          <Left>9.2878cm</Left>
-          <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Top>2.42105cm</Top>
+          <Left>6.89773cm</Left>
+          <Height>0.98624cm</Height>
+          <Width>7.42535cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -393,7 +394,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!!!</Value>
+                  <Value>=Globals!PageNumber</Value>
                   <Style>
                     <Color>LightGrey</Color>
                   </Style>

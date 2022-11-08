@@ -165,7 +165,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -233,26 +232,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Top 5 Peliculas mas Vendidas </Value>
+                  <Value>TOP 5 Películas</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <FontSize>16pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <Color>LightGrey</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>en el mes de Agosto</Value>
-                  <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <FontSize>16pt</FontSize>
+                    <FontFamily>candara</FontFamily>
+                    <FontSize>24pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Color>LightGrey</Color>
                   </Style>
@@ -264,10 +247,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.58875cm</Top>
-          <Left>4.62073cm</Left>
-          <Height>1.68479cm</Height>
-          <Width>10.69484cm</Width>
+          <Top>0.70986cm</Top>
+          <Left>5.23541cm</Left>
+          <Height>1.12917cm</Height>
+          <Width>10.52918cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -279,16 +262,30 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox6">
+        <Textbox Name="Textbox8">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!!</Value>
+                  <Value>Películas más populares</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
+                    <FontSize>18pt</FontSize>
+                    <Color>LightGrey</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value> en el mes</Value>
+                  <Style>
+                    <FontSize>18pt</FontSize>
                     <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
@@ -298,11 +295,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>2.69558cm</Top>
-          <Left>8.86037cm</Left>
-          <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>2.31386cm</Top>
+          <Left>5.65797cm</Left>
+          <Height>1.46385cm</Height>
+          <Width>9.46264cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>

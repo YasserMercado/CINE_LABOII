@@ -18,10 +18,7 @@ namespace Cine.Formularios
             InitializeComponent();
             EsconderReportes();
         }
-        [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+    
 
         private void EsconderReportes()
         {
@@ -46,6 +43,12 @@ namespace Cine.Formularios
             this.rptClientesAgosto.RefreshReport();
         }
 
+
+        [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
         private void FrmClientes_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -63,9 +66,7 @@ namespace Cine.Formularios
         //Vuelve al Home
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmHome home = new frmHome();
-            home.Show();
+            Application.Exit();
         }
 
         private void btnTodos_Click(object sender, EventArgs e)
@@ -84,6 +85,25 @@ namespace Cine.Formularios
         {
             EsconderReportes();
             rptClientesAgosto.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmHome frmHome = new frmHome();
+            frmHome.ShowDialog();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

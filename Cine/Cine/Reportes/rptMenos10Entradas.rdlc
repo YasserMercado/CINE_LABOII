@@ -284,6 +284,20 @@
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
+        <Image Name="imgLogo">
+          <Source>Embedded</Source>
+          <Value>Logo2</Value>
+          <Sizing>Fit</Sizing>
+          <Top>0.22231cm</Top>
+          <Left>17.34836cm</Left>
+          <Height>3.55539cm</Height>
+          <Width>2.91911cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
         <Textbox Name="Textbox2">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -291,10 +305,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>No se que ponerle</Value>
+                  <Value>Salas Poco Frecuentes</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <FontSize>16pt</FontSize>
+                    <FontFamily>candara</FontFamily>
+                    <FontSize>24pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Color>LightGrey</Color>
                   </Style>
@@ -306,10 +320,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.98563cm</Top>
-          <Left>5.09604cm</Left>
-          <Height>0.94396cm</Height>
-          <Width>10.27875cm</Width>
+          <Top>0.70488cm</Top>
+          <Left>5.23541cm</Left>
+          <Height>1.12917cm</Height>
+          <Width>10.52918cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -320,30 +335,16 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Image Name="imgLogo">
-          <Source>Embedded</Source>
-          <Value>Logo2</Value>
-          <Sizing>Fit</Sizing>
-          <Top>0.22231cm</Top>
-          <Left>17.34836cm</Left>
-          <Height>3.55539cm</Height>
-          <Width>2.91911cm</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
-        <Textbox Name="Textbox7">
+        <Textbox Name="Textbox8">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!!!</Value>
+                  <Value>Preferencias de nuestros clientes</Value>
                   <Style>
+                    <FontSize>18pt</FontSize>
                     <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
@@ -353,11 +354,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>2.53344cm</Top>
-          <Left>8.90604cm</Left>
-          <Height>0.54709cm</Height>
-          <Width>2.8175cm</Width>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>2.30888cm</Top>
+          <Left>4.93318cm</Left>
+          <Height>0.98624cm</Height>
+          <Width>11.34118cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>

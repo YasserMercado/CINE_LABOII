@@ -388,8 +388,8 @@
                 <TextRun>
                   <Value>Clientes</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <FontSize>22pt</FontSize>
+                    <FontFamily>candara</FontFamily>
+                    <FontSize>24pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Color>LightGrey</Color>
                   </Style>
@@ -401,10 +401,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.90625cm</Top>
-          <Left>7.50375cm</Left>
-          <Height>1.05392cm</Height>
-          <Width>5.9925cm</Width>
+          <Top>0.70488cm</Top>
+          <Left>5.23541cm</Left>
+          <Height>1.12917cm</Height>
+          <Width>10.52918cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -416,17 +416,16 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox6">
+        <Textbox Name="Textbox10">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Todos los CLientes de CINEMA</Value>
+                  <Value>Todos nuestros clientes</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <Format>d</Format>
+                    <FontSize>18pt</FontSize>
                     <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
@@ -437,10 +436,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>2.45406cm</Top>
-          <Left>7.32846cm</Left>
-          <Height>0.57354cm</Height>
-          <Width>6.34307cm</Width>
+          <Top>2.30888cm</Top>
+          <Left>5.65797cm</Left>
+          <Height>0.98624cm</Height>
+          <Width>9.46264cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>

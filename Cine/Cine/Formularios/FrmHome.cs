@@ -89,6 +89,7 @@ namespace Cine
             this.Hide();
             Formularios.FrmClientes form = new Formularios.FrmClientes();
             form.ShowDialog();
+
         }
 
         private void btnFunciones_Click(object sender, EventArgs e)
@@ -110,6 +111,12 @@ namespace Cine
             this.Hide();
             Formularios.FrmSalas form = new Formularios.FrmSalas();
             form.ShowDialog();
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

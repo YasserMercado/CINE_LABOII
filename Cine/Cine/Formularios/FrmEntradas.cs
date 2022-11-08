@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,9 +28,7 @@ namespace Cine.Formularios
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmHome home = new frmHome();
-            home.Show();
+            Application.Exit();
         }
 
         private void FrmEntradas_Load(object sender, EventArgs e)
@@ -62,6 +61,37 @@ namespace Cine.Formularios
         {
             EsconderReportes();
             rptVentaPorRango.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmHome frmHome = new frmHome();
+            frmHome.ShowDialog();
+            
+        }
+
+        [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        private void FrmEntradas_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

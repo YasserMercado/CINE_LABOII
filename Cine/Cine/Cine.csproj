@@ -260,6 +260,9 @@
     <EmbeddedResource Include="Reportes\rptMenos10Entradas.rdlc" />
     <EmbeddedResource Include="Reportes\rptRecaudacionSpielberg.rdlc" />
     <EmbeddedResource Include="Reportes\rptRecurrentes.rdlc" />
+    <EmbeddedResource Include="Reportes\rptTodasLasEntradas.rdlc" />
+    <EmbeddedResource Include="Reportes\rptTodasLasFunciones.rdlc" />
+    <EmbeddedResource Include="Reportes\rptTodasLasSalas.rdlc" />
     <EmbeddedResource Include="Reportes\rptTodosLosClientes.rdlc" />
     <EmbeddedResource Include="Reportes\rptTop5VendidasAgosto.rdlc" />
     <EmbeddedResource Include="Reportes\rptVentaOnline.rdlc" />

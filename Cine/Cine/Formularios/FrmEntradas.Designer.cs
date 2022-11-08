@@ -30,15 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEntradas));
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dsDescuentoTarjetaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsCine = new Cine.Reportes.dsCine();
+            this.dtVentaOnlineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtVentasxRangoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtVentaOnlineBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.dtVentasxRangoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.dsCineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnVentaPorRango = new Cine.Botones.buttonPersonalizado();
@@ -55,10 +58,8 @@
             this.rptDescuentoTarjeta = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dtVentaOnlineBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dtVentaOnlineBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dtVentasxRangoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtVentasxRangoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dsDescuentoTarjetaTableAdapter = new Cine.Reportes.dsCineTableAdapters.dsDescuentoTarjetaTableAdapter();
-            this.dtVentaOnlineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtVentaOnlineTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtVentaOnlineTableAdapter();
             this.dtVentasxRangoTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtVentasxRangoTableAdapter();
             this.dtTo5VendidasAgostoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -68,10 +69,13 @@
             this.rptVentaPorRango = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dsDescuentoTarjetaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCineBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -80,9 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTo5VendidasAgostoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource4)).BeginInit();
@@ -97,6 +99,16 @@
             // 
             this.dsCine.DataSetName = "dsCine";
             this.dsCine.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dtVentaOnlineBindingSource
+            // 
+            this.dtVentaOnlineBindingSource.DataMember = "dtVentaOnline";
+            this.dtVentaOnlineBindingSource.DataSource = this.dsCine;
+            // 
+            // dtVentasxRangoBindingSource
+            // 
+            this.dtVentasxRangoBindingSource.DataMember = "dtVentasxRango";
+            this.dtVentasxRangoBindingSource.DataSource = this.dsCine;
             // 
             // dtVentaOnlineBindingSource3
             // 
@@ -116,6 +128,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel7);
@@ -129,6 +142,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 601);
             this.panel1.TabIndex = 8;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(89, 486);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(65, 71);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLogout.TabIndex = 20;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // label2
             // 
@@ -279,6 +305,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 146);
             this.panel2.TabIndex = 12;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // pictureBox1
             // 
@@ -304,9 +331,9 @@
             // 
             // rptDescuentoTarjeta
             // 
-            reportDataSource1.Name = "dsDescuentoTarjeta";
-            reportDataSource1.Value = this.dsDescuentoTarjetaBindingSource;
-            this.rptDescuentoTarjeta.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource7.Name = "dsDescuentoTarjeta";
+            reportDataSource7.Value = this.dsDescuentoTarjetaBindingSource;
+            this.rptDescuentoTarjeta.LocalReport.DataSources.Add(reportDataSource7);
             this.rptDescuentoTarjeta.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptDescuentoTarjeta.rdlc";
             this.rptDescuentoTarjeta.Location = new System.Drawing.Point(256, 31);
             this.rptDescuentoTarjeta.Name = "rptDescuentoTarjeta";
@@ -324,11 +351,6 @@
             this.dtVentaOnlineBindingSource2.DataMember = "dtVentaOnline";
             this.dtVentaOnlineBindingSource2.DataSource = this.dsCineBindingSource;
             // 
-            // dtVentasxRangoBindingSource
-            // 
-            this.dtVentasxRangoBindingSource.DataMember = "dtVentasxRango";
-            this.dtVentasxRangoBindingSource.DataSource = this.dsCine;
-            // 
             // dtVentasxRangoBindingSource1
             // 
             this.dtVentasxRangoBindingSource1.DataMember = "dtVentasxRango";
@@ -337,11 +359,6 @@
             // dsDescuentoTarjetaTableAdapter
             // 
             this.dsDescuentoTarjetaTableAdapter.ClearBeforeFill = true;
-            // 
-            // dtVentaOnlineBindingSource
-            // 
-            this.dtVentaOnlineBindingSource.DataMember = "dtVentaOnline";
-            this.dtVentaOnlineBindingSource.DataSource = this.dsCine;
             // 
             // dtVentaOnlineTableAdapter
             // 
@@ -364,9 +381,9 @@
             // rptVentaOnline
             // 
             this.rptVentaOnline.DocumentMapWidth = 26;
-            reportDataSource2.Name = "dsVentaOnline";
-            reportDataSource2.Value = this.dtVentaOnlineBindingSource;
-            this.rptVentaOnline.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource8.Name = "dsVentaOnline";
+            reportDataSource8.Value = this.dtVentaOnlineBindingSource;
+            this.rptVentaOnline.LocalReport.DataSources.Add(reportDataSource8);
             this.rptVentaOnline.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptVentaOnline.rdlc";
             this.rptVentaOnline.Location = new System.Drawing.Point(256, 31);
             this.rptVentaOnline.Name = "rptVentaOnline";
@@ -381,9 +398,9 @@
             // 
             // rptVentaPorRango
             // 
-            reportDataSource3.Name = "dsVentasxRango";
-            reportDataSource3.Value = this.dtVentasxRangoBindingSource;
-            this.rptVentaPorRango.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource9.Name = "dsVentasxRango";
+            reportDataSource9.Value = this.dtVentasxRangoBindingSource;
+            this.rptVentaPorRango.LocalReport.DataSources.Add(reportDataSource9);
             this.rptVentaPorRango.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptVentasxRango.rdlc";
             this.rptVentaPorRango.Location = new System.Drawing.Point(256, 31);
             this.rptVentaPorRango.Name = "rptVentaPorRango";
@@ -403,17 +420,22 @@
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEntradas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPeliculas";
             this.Load += new System.EventHandler(this.FrmEntradas_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmEntradas_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dsDescuentoTarjetaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCineBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -422,9 +444,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTo5VendidasAgostoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource4)).EndInit();
@@ -467,5 +487,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer rptVentaOnline;
         private System.Windows.Forms.BindingSource dtVentaOnlineBindingSource4;
         private Microsoft.Reporting.WinForms.ReportViewer rptVentaPorRango;
+        private System.Windows.Forms.PictureBox btnLogout;
     }
 }

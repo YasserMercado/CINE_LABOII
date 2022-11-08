@@ -135,6 +135,7 @@
             this.label1.Size = new System.Drawing.Size(95, 31);
             this.label1.TabIndex = 13;
             this.label1.Text = "HOME";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // btnCerrar
             // 

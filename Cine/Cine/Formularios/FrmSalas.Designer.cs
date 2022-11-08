@@ -32,7 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSalas));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.dsButacasVipBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsCine = new Cine.Reportes.dsCine();
+            this.dtMenos10ButacasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnButacasVip = new Cine.Botones.buttonPersonalizado();
@@ -43,32 +47,46 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rptButacasVip = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsCine = new Cine.Reportes.dsCine();
             this.dsDescuentoTarjetaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsDescuentoTarjetaTableAdapter = new Cine.Reportes.dsCineTableAdapters.dsDescuentoTarjetaTableAdapter();
-            this.dsButacasVipBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsButacasVipTableAdapter = new Cine.Reportes.dsCineTableAdapters.dsButacasVipTableAdapter();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.rptMenosDe10 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dtMenos10ButacasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dtMenos10ButacasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dtMenos10ButacasTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtMenos10ButacasTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dsButacasVipBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtMenos10ButacasBindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDescuentoTarjetaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsButacasVipBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtMenos10ButacasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtMenos10ButacasBindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dsButacasVipBindingSource
+            // 
+            this.dsButacasVipBindingSource.DataMember = "dsButacasVip";
+            this.dsButacasVipBindingSource.DataSource = this.dsCine;
+            // 
+            // dsCine
+            // 
+            this.dsCine.DataSetName = "dsCine";
+            this.dsCine.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dtMenos10ButacasBindingSource1
+            // 
+            this.dtMenos10ButacasBindingSource1.DataMember = "dtMenos10Butacas";
+            this.dtMenos10ButacasBindingSource1.DataSource = this.dsCine;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
@@ -80,6 +98,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 601);
             this.panel1.TabIndex = 9;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(89, 486);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(65, 71);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLogout.TabIndex = 20;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // label2
             // 
@@ -164,7 +195,7 @@
             this.btnMenosDe10.Name = "btnMenosDe10";
             this.btnMenosDe10.Size = new System.Drawing.Size(250, 53);
             this.btnMenosDe10.TabIndex = 11;
-            this.btnMenosDe10.Text = "Menos de 10 Ent";
+            this.btnMenosDe10.Text = "Menos Frecuentes";
             this.btnMenosDe10.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
             this.btnMenosDe10.UseVisualStyleBackColor = false;
             this.btnMenosDe10.Click += new System.EventHandler(this.btnMenosDe10_Click);
@@ -187,6 +218,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 146);
             this.panel2.TabIndex = 12;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // pictureBox1
             // 
@@ -211,11 +243,6 @@
             this.rptButacasVip.Size = new System.Drawing.Size(813, 564);
             this.rptButacasVip.TabIndex = 10;
             // 
-            // dsCine
-            // 
-            this.dsCine.DataSetName = "dsCine";
-            this.dsCine.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dsDescuentoTarjetaBindingSource
             // 
             this.dsDescuentoTarjetaBindingSource.DataMember = "dsDescuentoTarjeta";
@@ -224,11 +251,6 @@
             // dsDescuentoTarjetaTableAdapter
             // 
             this.dsDescuentoTarjetaTableAdapter.ClearBeforeFill = true;
-            // 
-            // dsButacasVipBindingSource
-            // 
-            this.dsButacasVipBindingSource.DataMember = "dsButacasVip";
-            this.dsButacasVipBindingSource.DataSource = this.dsCine;
             // 
             // dsButacasVipTableAdapter
             // 
@@ -264,11 +286,6 @@
             this.dtMenos10ButacasBindingSource.DataMember = "dtMenos10Butacas";
             this.dtMenos10ButacasBindingSource.DataSource = this.dsCine;
             // 
-            // dtMenos10ButacasBindingSource1
-            // 
-            this.dtMenos10ButacasBindingSource1.DataMember = "dtMenos10Butacas";
-            this.dtMenos10ButacasBindingSource1.DataSource = this.dsCine;
-            // 
             // dtMenos10ButacasTableAdapter
             // 
             this.dtMenos10ButacasTableAdapter.ClearBeforeFill = true;
@@ -284,22 +301,25 @@
             this.Controls.Add(this.rptButacasVip);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmSalas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSalas";
             this.Load += new System.EventHandler(this.FrmSalas_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmSalas_MouseDown);
+            ((System.ComponentModel.ISupportInitialize)(this.dsButacasVipBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtMenos10ButacasBindingSource1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDescuentoTarjetaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsButacasVipBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtMenos10ButacasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtMenos10ButacasBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,5 +347,6 @@
         private System.Windows.Forms.BindingSource dtMenos10ButacasBindingSource;
         private System.Windows.Forms.BindingSource dtMenos10ButacasBindingSource1;
         private Reportes.dsCineTableAdapters.dtMenos10ButacasTableAdapter dtMenos10ButacasTableAdapter;
+        private System.Windows.Forms.PictureBox btnLogout;
     }
 }

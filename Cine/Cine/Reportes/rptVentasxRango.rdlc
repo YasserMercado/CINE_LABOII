@@ -225,17 +225,17 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox1">
+        <Textbox Name="Textbox2">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Rangos</Value>
+                  <Value>Rango Horario</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <FontSize>22pt</FontSize>
+                    <FontFamily>candara</FontFamily>
+                    <FontSize>24pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <Color>LightGrey</Color>
                   </Style>
@@ -247,10 +247,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.77396cm</Top>
-          <Left>7.4376cm</Left>
-          <Height>1.04979cm</Height>
-          <Width>5.96604cm</Width>
+          <Top>0.70488cm</Top>
+          <Left>5.32802cm</Left>
+          <Height>1.12917cm</Height>
+          <Width>10.52918cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -262,16 +262,16 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox5">
+        <Textbox Name="Textbox9">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!</Value>
+                  <Value>Cantidad de entradas vendidad a partir de las 18 hs</Value>
                   <Style>
-                    <FontFamily>candara</FontFamily>
+                    <FontSize>18pt</FontSize>
                     <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
@@ -281,11 +281,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>2.21932cm</Top>
-          <Left>9.01912cm</Left>
-          <Height>0.62646cm</Height>
-          <Width>2.8175cm</Width>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>2.30888cm</Top>
+          <Left>5.75058cm</Left>
+          <Height>1.46882cm</Height>
+          <Width>9.46264cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
