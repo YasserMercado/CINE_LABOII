@@ -24,6 +24,7 @@ namespace Cine.Formularios
             rptDescuentoTarjeta.Hide();
             rptVentaOnline.Hide();
             rptVentaPorRango.Hide();
+            rptEntradas.Hide();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -33,6 +34,10 @@ namespace Cine.Formularios
 
         private void FrmEntradas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dsCine.dtTodasLasEntradas' Puede moverla o quitarla según sea necesario.
+            this.dtTodasLasEntradasTableAdapter.Fill(this.dsCine.dtTodasLasEntradas);
+            rptEntradas.Show();
+
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtVentasxRango' Puede moverla o quitarla según sea necesario.
             this.dtVentasxRangoTableAdapter.Fill(this.dsCine.dtVentasxRango);
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtVentaOnline' Puede moverla o quitarla según sea necesario.
@@ -43,6 +48,7 @@ namespace Cine.Formularios
             this.rptDescuentoTarjeta.RefreshReport();
             this.rptVentaOnline.RefreshReport();
             this.rptVentaPorRango.RefreshReport();
+            this.rptEntradas.RefreshReport();
         }
 
         private void btnDescuentoTarjeta_Click(object sender, EventArgs e)
@@ -92,6 +98,12 @@ namespace Cine.Formularios
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnEntradas_Click(object sender, EventArgs e)
+        {
+            EsconderReportes();
+            rptEntradas.Show();
         }
     }
 }

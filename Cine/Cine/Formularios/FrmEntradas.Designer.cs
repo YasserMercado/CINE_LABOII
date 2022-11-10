@@ -30,9 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEntradas));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dsDescuentoTarjetaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsCine = new Cine.Reportes.dsCine();
             this.dtVentaOnlineBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -44,13 +45,10 @@
             this.btnLogout = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btnVentaPorRango = new Cine.Botones.buttonPersonalizado();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnVentaOnline = new Cine.Botones.buttonPersonalizado();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnDescuentoTarjeta = new Cine.Botones.buttonPersonalizado();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -67,6 +65,14 @@
             this.rptVentaOnline = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dtVentaOnlineBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.rptVentaPorRango = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rptEntradas = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dtTodasLasEntradasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnVentaPorRango = new Cine.Botones.buttonPersonalizado();
+            this.btnVentaOnline = new Cine.Botones.buttonPersonalizado();
+            this.btnDescuentoTarjeta = new Cine.Botones.buttonPersonalizado();
+            this.btnEntradas = new Cine.Botones.buttonPersonalizado();
+            this.dtTodasLasEntradasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dtTodasLasEntradasTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtTodasLasEntradasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dsDescuentoTarjetaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource)).BeginInit();
@@ -88,6 +94,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtTo5VendidasAgostoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodasLasEntradasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodasLasEntradasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dsDescuentoTarjetaBindingSource
@@ -128,6 +136,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.btnVentaPorRango);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel8);
@@ -169,37 +178,13 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.btnVentaPorRango);
+            this.panel8.Controls.Add(this.btnVentaOnline);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 300);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(250, 53);
             this.panel8.TabIndex = 18;
-            // 
-            // btnVentaPorRango
-            // 
-            this.btnVentaPorRango.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
-            this.btnVentaPorRango.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnVentaPorRango.BorderRadius = 3;
-            this.btnVentaPorRango.BorderSize = 1;
-            this.btnVentaPorRango.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVentaPorRango.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVentaPorRango.FlatAppearance.BorderSize = 0;
-            this.btnVentaPorRango.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
-            this.btnVentaPorRango.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.btnVentaPorRango.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentaPorRango.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btnVentaPorRango.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnVentaPorRango.Location = new System.Drawing.Point(0, 0);
-            this.btnVentaPorRango.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVentaPorRango.Name = "btnVentaPorRango";
-            this.btnVentaPorRango.Size = new System.Drawing.Size(250, 53);
-            this.btnVentaPorRango.TabIndex = 12;
-            this.btnVentaPorRango.Text = "Venta Por Rango";
-            this.btnVentaPorRango.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnVentaPorRango.UseVisualStyleBackColor = false;
-            this.btnVentaPorRango.Click += new System.EventHandler(this.btnVentaPorRango_Click);
             // 
             // panel7
             // 
@@ -212,37 +197,13 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnVentaOnline);
+            this.panel6.Controls.Add(this.btnDescuentoTarjeta);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 235);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(250, 53);
             this.panel6.TabIndex = 16;
-            // 
-            // btnVentaOnline
-            // 
-            this.btnVentaOnline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
-            this.btnVentaOnline.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnVentaOnline.BorderRadius = 3;
-            this.btnVentaOnline.BorderSize = 1;
-            this.btnVentaOnline.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVentaOnline.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVentaOnline.FlatAppearance.BorderSize = 0;
-            this.btnVentaOnline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
-            this.btnVentaOnline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.btnVentaOnline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentaOnline.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btnVentaOnline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnVentaOnline.Location = new System.Drawing.Point(0, 0);
-            this.btnVentaOnline.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVentaOnline.Name = "btnVentaOnline";
-            this.btnVentaOnline.Size = new System.Drawing.Size(250, 53);
-            this.btnVentaOnline.TabIndex = 12;
-            this.btnVentaOnline.Text = "Venta Online";
-            this.btnVentaOnline.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnVentaOnline.UseVisualStyleBackColor = false;
-            this.btnVentaOnline.Click += new System.EventHandler(this.btnVentaOnline_Click);
             // 
             // panel5
             // 
@@ -255,37 +216,13 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnDescuentoTarjeta);
+            this.panel4.Controls.Add(this.btnEntradas);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 170);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(250, 53);
             this.panel4.TabIndex = 14;
-            // 
-            // btnDescuentoTarjeta
-            // 
-            this.btnDescuentoTarjeta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
-            this.btnDescuentoTarjeta.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnDescuentoTarjeta.BorderRadius = 3;
-            this.btnDescuentoTarjeta.BorderSize = 1;
-            this.btnDescuentoTarjeta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDescuentoTarjeta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDescuentoTarjeta.FlatAppearance.BorderSize = 0;
-            this.btnDescuentoTarjeta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
-            this.btnDescuentoTarjeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.btnDescuentoTarjeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDescuentoTarjeta.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btnDescuentoTarjeta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnDescuentoTarjeta.Location = new System.Drawing.Point(0, 0);
-            this.btnDescuentoTarjeta.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDescuentoTarjeta.Name = "btnDescuentoTarjeta";
-            this.btnDescuentoTarjeta.Size = new System.Drawing.Size(250, 53);
-            this.btnDescuentoTarjeta.TabIndex = 11;
-            this.btnDescuentoTarjeta.Text = "Descuento Tarjeta";
-            this.btnDescuentoTarjeta.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnDescuentoTarjeta.UseVisualStyleBackColor = false;
-            this.btnDescuentoTarjeta.Click += new System.EventHandler(this.btnDescuentoTarjeta_Click);
             // 
             // panel3
             // 
@@ -331,9 +268,9 @@
             // 
             // rptDescuentoTarjeta
             // 
-            reportDataSource7.Name = "dsDescuentoTarjeta";
-            reportDataSource7.Value = this.dsDescuentoTarjetaBindingSource;
-            this.rptDescuentoTarjeta.LocalReport.DataSources.Add(reportDataSource7);
+            reportDataSource4.Name = "dsDescuentoTarjeta";
+            reportDataSource4.Value = this.dsDescuentoTarjetaBindingSource;
+            this.rptDescuentoTarjeta.LocalReport.DataSources.Add(reportDataSource4);
             this.rptDescuentoTarjeta.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptDescuentoTarjeta.rdlc";
             this.rptDescuentoTarjeta.Location = new System.Drawing.Point(256, 31);
             this.rptDescuentoTarjeta.Name = "rptDescuentoTarjeta";
@@ -381,9 +318,9 @@
             // rptVentaOnline
             // 
             this.rptVentaOnline.DocumentMapWidth = 26;
-            reportDataSource8.Name = "dsVentaOnline";
-            reportDataSource8.Value = this.dtVentaOnlineBindingSource;
-            this.rptVentaOnline.LocalReport.DataSources.Add(reportDataSource8);
+            reportDataSource5.Name = "dsVentaOnline";
+            reportDataSource5.Value = this.dtVentaOnlineBindingSource;
+            this.rptVentaOnline.LocalReport.DataSources.Add(reportDataSource5);
             this.rptVentaOnline.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptVentaOnline.rdlc";
             this.rptVentaOnline.Location = new System.Drawing.Point(256, 31);
             this.rptVentaOnline.Name = "rptVentaOnline";
@@ -398,9 +335,9 @@
             // 
             // rptVentaPorRango
             // 
-            reportDataSource9.Name = "dsVentasxRango";
-            reportDataSource9.Value = this.dtVentasxRangoBindingSource;
-            this.rptVentaPorRango.LocalReport.DataSources.Add(reportDataSource9);
+            reportDataSource6.Name = "dsVentasxRango";
+            reportDataSource6.Value = this.dtVentasxRangoBindingSource;
+            this.rptVentaPorRango.LocalReport.DataSources.Add(reportDataSource6);
             this.rptVentaPorRango.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptVentasxRango.rdlc";
             this.rptVentaPorRango.Location = new System.Drawing.Point(256, 31);
             this.rptVentaPorRango.Name = "rptVentaPorRango";
@@ -408,12 +345,133 @@
             this.rptVentaPorRango.Size = new System.Drawing.Size(813, 564);
             this.rptVentaPorRango.TabIndex = 13;
             // 
+            // rptEntradas
+            // 
+            reportDataSource7.Name = "ds";
+            reportDataSource7.Value = this.dtTodasLasEntradasBindingSource1;
+            this.rptEntradas.LocalReport.DataSources.Add(reportDataSource7);
+            this.rptEntradas.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptTodasLasEntradas.rdlc";
+            this.rptEntradas.Location = new System.Drawing.Point(256, 31);
+            this.rptEntradas.Name = "rptEntradas";
+            this.rptEntradas.ServerReport.BearerToken = null;
+            this.rptEntradas.Size = new System.Drawing.Size(813, 564);
+            this.rptEntradas.TabIndex = 14;
+            // 
+            // dtTodasLasEntradasBindingSource
+            // 
+            this.dtTodasLasEntradasBindingSource.DataMember = "dtTodasLasEntradas";
+            this.dtTodasLasEntradasBindingSource.DataSource = this.dsCine;
+            // 
+            // btnVentaPorRango
+            // 
+            this.btnVentaPorRango.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnVentaPorRango.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnVentaPorRango.BorderRadius = 3;
+            this.btnVentaPorRango.BorderSize = 1;
+            this.btnVentaPorRango.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVentaPorRango.FlatAppearance.BorderSize = 0;
+            this.btnVentaPorRango.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnVentaPorRango.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnVentaPorRango.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentaPorRango.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnVentaPorRango.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnVentaPorRango.Location = new System.Drawing.Point(0, 368);
+            this.btnVentaPorRango.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVentaPorRango.Name = "btnVentaPorRango";
+            this.btnVentaPorRango.Size = new System.Drawing.Size(250, 53);
+            this.btnVentaPorRango.TabIndex = 12;
+            this.btnVentaPorRango.Text = "Venta Por Rango";
+            this.btnVentaPorRango.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnVentaPorRango.UseVisualStyleBackColor = false;
+            this.btnVentaPorRango.Click += new System.EventHandler(this.btnVentaPorRango_Click);
+            // 
+            // btnVentaOnline
+            // 
+            this.btnVentaOnline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnVentaOnline.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnVentaOnline.BorderRadius = 3;
+            this.btnVentaOnline.BorderSize = 1;
+            this.btnVentaOnline.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVentaOnline.FlatAppearance.BorderSize = 0;
+            this.btnVentaOnline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnVentaOnline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnVentaOnline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentaOnline.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnVentaOnline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnVentaOnline.Location = new System.Drawing.Point(0, 0);
+            this.btnVentaOnline.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVentaOnline.Name = "btnVentaOnline";
+            this.btnVentaOnline.Size = new System.Drawing.Size(250, 53);
+            this.btnVentaOnline.TabIndex = 12;
+            this.btnVentaOnline.Text = "Venta Online";
+            this.btnVentaOnline.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnVentaOnline.UseVisualStyleBackColor = false;
+            this.btnVentaOnline.Click += new System.EventHandler(this.btnVentaOnline_Click);
+            // 
+            // btnDescuentoTarjeta
+            // 
+            this.btnDescuentoTarjeta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnDescuentoTarjeta.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnDescuentoTarjeta.BorderRadius = 3;
+            this.btnDescuentoTarjeta.BorderSize = 1;
+            this.btnDescuentoTarjeta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDescuentoTarjeta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDescuentoTarjeta.FlatAppearance.BorderSize = 0;
+            this.btnDescuentoTarjeta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnDescuentoTarjeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnDescuentoTarjeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDescuentoTarjeta.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnDescuentoTarjeta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnDescuentoTarjeta.Location = new System.Drawing.Point(0, 0);
+            this.btnDescuentoTarjeta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDescuentoTarjeta.Name = "btnDescuentoTarjeta";
+            this.btnDescuentoTarjeta.Size = new System.Drawing.Size(250, 53);
+            this.btnDescuentoTarjeta.TabIndex = 11;
+            this.btnDescuentoTarjeta.Text = "Descuento Tarjeta";
+            this.btnDescuentoTarjeta.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnDescuentoTarjeta.UseVisualStyleBackColor = false;
+            this.btnDescuentoTarjeta.Click += new System.EventHandler(this.btnDescuentoTarjeta_Click);
+            // 
+            // btnEntradas
+            // 
+            this.btnEntradas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnEntradas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnEntradas.BorderRadius = 3;
+            this.btnEntradas.BorderSize = 1;
+            this.btnEntradas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntradas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEntradas.FlatAppearance.BorderSize = 0;
+            this.btnEntradas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnEntradas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntradas.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnEntradas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnEntradas.Location = new System.Drawing.Point(0, 0);
+            this.btnEntradas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEntradas.Name = "btnEntradas";
+            this.btnEntradas.Size = new System.Drawing.Size(250, 53);
+            this.btnEntradas.TabIndex = 12;
+            this.btnEntradas.Text = "Entradas";
+            this.btnEntradas.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnEntradas.UseVisualStyleBackColor = false;
+            this.btnEntradas.Click += new System.EventHandler(this.btnEntradas_Click);
+            // 
+            // dtTodasLasEntradasBindingSource1
+            // 
+            this.dtTodasLasEntradasBindingSource1.DataMember = "dtTodasLasEntradas";
+            this.dtTodasLasEntradasBindingSource1.DataSource = this.dsCine;
+            // 
+            // dtTodasLasEntradasTableAdapter
+            // 
+            this.dtTodasLasEntradasTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmEntradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1075, 601);
+            this.Controls.Add(this.rptEntradas);
             this.Controls.Add(this.rptVentaPorRango);
             this.Controls.Add(this.rptVentaOnline);
             this.Controls.Add(this.rptDescuentoTarjeta);
@@ -448,6 +506,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtTo5VendidasAgostoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentasxRangoBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtVentaOnlineBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodasLasEntradasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodasLasEntradasBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -460,7 +520,6 @@
         private Botones.buttonPersonalizado btnVentaPorRango;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
-        private Botones.buttonPersonalizado btnVentaOnline;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private Botones.buttonPersonalizado btnDescuentoTarjeta;
@@ -488,5 +547,11 @@
         private System.Windows.Forms.BindingSource dtVentaOnlineBindingSource4;
         private Microsoft.Reporting.WinForms.ReportViewer rptVentaPorRango;
         private System.Windows.Forms.PictureBox btnLogout;
+        private Botones.buttonPersonalizado btnEntradas;
+        private Botones.buttonPersonalizado btnVentaOnline;
+        private Microsoft.Reporting.WinForms.ReportViewer rptEntradas;
+        private System.Windows.Forms.BindingSource dtTodasLasEntradasBindingSource;
+        private System.Windows.Forms.BindingSource dtTodasLasEntradasBindingSource1;
+        private Reportes.dsCineTableAdapters.dtTodasLasEntradasTableAdapter dtTodasLasEntradasTableAdapter;
     }
 }

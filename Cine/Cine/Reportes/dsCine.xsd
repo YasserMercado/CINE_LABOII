@@ -13,7 +13,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtRecurrentesTableAdapter" GeneratorDataComponentClassName="dtRecurrentesTableAdapter" Name="dtRecurrentes" UserDataComponentName="dtRecurrentesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        c.nombre_cliente + ' ' + c.apellido_cliente AS Cliente, COUNT(*) AS Cantidad, MONTH(e.fecha_entrada) AS Mes, YEAR(e.fecha_entrada) AS Año
@@ -347,7 +347,7 @@ WHERE        (fp.forma_pago = 'Tarjeta Credito') AND (DATEDIFF(month, e.fecha_en
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtTodasLasEntradasTableAdapter" GeneratorDataComponentClassName="dtTodasLasEntradasTableAdapter" Name="dtTodasLasEntradas" UserDataComponentName="dtTodasLasEntradasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectName="CINE_CORDOBA.dbo.PELICULAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectName="CINE_CORDOBA.dbo.PELICULAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        format(e.fecha_entrada, 'dd/MM/yyyy') AS Fecha, c.apellido_cliente + ' ' + c.nombre_cliente AS Cliente, p.nombre_pelicula
@@ -409,6 +409,28 @@ FROM            DETALLES_SALAS AS ds INNER JOIN
               <Mapping SourceColumn="Sala" DataSetColumn="Sala" />
               <Mapping SourceColumn="Descripción" DataSetColumn="Descripción" />
               <Mapping SourceColumn="Característica" DataSetColumn="Característica" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dsTodasLasPeliculasTableAdapter" GeneratorDataComponentClassName="dsTodasLasPeliculasTableAdapter" Name="dsTodasLasPeliculas" UserDataComponentName="dsTodasLasPeliculasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CINE_CORDOBAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        p.nombre_pelicula AS Película, d.nombre AS Director, c.clasificacion AS Clasificación, format(p.fecha_estreno, 'dd/MM/yyyy') AS Estreno
+FROM            PELICULAS AS p INNER JOIN
+                         CLASIFICACIONES AS c ON p.id_clasificacion = c.id_clasificacion INNER JOIN
+                         DIRECTORES AS d ON d.id_director = p.id_director</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Película" DataSetColumn="Película" />
+              <Mapping SourceColumn="Director" DataSetColumn="Director" />
+              <Mapping SourceColumn="Clasificación" DataSetColumn="Clasificación" />
+              <Mapping SourceColumn="Estreno" DataSetColumn="Estreno" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -621,24 +643,24 @@ FROM            DETALLES_SALAS AS ds INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dtTodasLasEntradas" msprop:Generator_RowClassName="dtTodasLasEntradasRow" msprop:Generator_RowEvHandlerName="dtTodasLasEntradasRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTodasLasEntradasRowDeleted" msprop:Generator_RowDeletingName="dtTodasLasEntradasRowDeleting" msprop:Generator_RowEvArgName="dtTodasLasEntradasRowChangeEvent" msprop:Generator_TablePropName="dtTodasLasEntradas" msprop:Generator_RowChangedName="dtTodasLasEntradasRowChanged" msprop:Generator_UserTableName="dtTodasLasEntradas" msprop:Generator_RowChangingName="dtTodasLasEntradasRowChanging" msprop:Generator_TableClassName="dtTodasLasEntradasDataTable" msprop:Generator_TableVarName="tabledtTodasLasEntradas">
+        <xs:element name="dtTodasLasEntradas" msprop:Generator_RowEvHandlerName="dtTodasLasEntradasRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTodasLasEntradasRowDeleted" msprop:Generator_RowDeletingName="dtTodasLasEntradasRowDeleting" msprop:Generator_RowEvArgName="dtTodasLasEntradasRowChangeEvent" msprop:Generator_TablePropName="dtTodasLasEntradas" msprop:Generator_RowChangedName="dtTodasLasEntradasRowChanged" msprop:Generator_UserTableName="dtTodasLasEntradas" msprop:Generator_RowChangingName="dtTodasLasEntradasRowChanging" msprop:Generator_RowClassName="dtTodasLasEntradasRow" msprop:Generator_TableClassName="dtTodasLasEntradasDataTable" msprop:Generator_TableVarName="tabledtTodasLasEntradas">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Fecha" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" minOccurs="0">
+              <xs:element name="Fecha" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="4000" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cliente" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente" minOccurs="0">
+              <xs:element name="Cliente" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_UserColumnName="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="101" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="nombre_pelicula" msprop:Generator_UserColumnName="nombre_pelicula" msprop:Generator_ColumnPropNameInTable="nombre_peliculaColumn" msprop:Generator_ColumnPropNameInRow="nombre_pelicula" msprop:Generator_ColumnVarNameInTable="columnnombre_pelicula">
+              <xs:element name="nombre_pelicula" msprop:Generator_ColumnPropNameInTable="nombre_peliculaColumn" msprop:Generator_ColumnPropNameInRow="nombre_pelicula" msprop:Generator_UserColumnName="nombre_pelicula" msprop:Generator_ColumnVarNameInTable="columnnombre_pelicula">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -648,49 +670,83 @@ FROM            DETALLES_SALAS AS ds INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dtTodasLasFunciones" msprop:Generator_RowClassName="dtTodasLasFuncionesRow" msprop:Generator_RowEvHandlerName="dtTodasLasFuncionesRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTodasLasFuncionesRowDeleted" msprop:Generator_RowDeletingName="dtTodasLasFuncionesRowDeleting" msprop:Generator_RowEvArgName="dtTodasLasFuncionesRowChangeEvent" msprop:Generator_TablePropName="dtTodasLasFunciones" msprop:Generator_RowChangedName="dtTodasLasFuncionesRowChanged" msprop:Generator_UserTableName="dtTodasLasFunciones" msprop:Generator_RowChangingName="dtTodasLasFuncionesRowChanging" msprop:Generator_TableClassName="dtTodasLasFuncionesDataTable" msprop:Generator_TableVarName="tabledtTodasLasFunciones">
+        <xs:element name="dtTodasLasFunciones" msprop:Generator_RowEvHandlerName="dtTodasLasFuncionesRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTodasLasFuncionesRowDeleted" msprop:Generator_RowDeletingName="dtTodasLasFuncionesRowDeleting" msprop:Generator_RowEvArgName="dtTodasLasFuncionesRowChangeEvent" msprop:Generator_TablePropName="dtTodasLasFunciones" msprop:Generator_RowChangedName="dtTodasLasFuncionesRowChanged" msprop:Generator_UserTableName="dtTodasLasFunciones" msprop:Generator_RowChangingName="dtTodasLasFuncionesRowChanging" msprop:Generator_RowClassName="dtTodasLasFuncionesRow" msprop:Generator_TableClassName="dtTodasLasFuncionesDataTable" msprop:Generator_TableVarName="tabledtTodasLasFunciones">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Pelicula" msprop:Generator_UserColumnName="Pelicula" msprop:Generator_ColumnPropNameInTable="PeliculaColumn" msprop:Generator_ColumnPropNameInRow="Pelicula" msprop:Generator_ColumnVarNameInTable="columnPelicula">
+              <xs:element name="Pelicula" msprop:Generator_ColumnPropNameInTable="PeliculaColumn" msprop:Generator_ColumnPropNameInRow="Pelicula" msprop:Generator_UserColumnName="Pelicula" msprop:Generator_ColumnVarNameInTable="columnPelicula">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Idioma" msprop:Generator_UserColumnName="Idioma" msprop:Generator_ColumnPropNameInTable="IdiomaColumn" msprop:Generator_ColumnPropNameInRow="Idioma" msprop:Generator_ColumnVarNameInTable="columnIdioma">
+              <xs:element name="Idioma" msprop:Generator_ColumnPropNameInTable="IdiomaColumn" msprop:Generator_ColumnPropNameInRow="Idioma" msprop:Generator_UserColumnName="Idioma" msprop:Generator_ColumnVarNameInTable="columnIdioma">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Clasificación" msprop:Generator_UserColumnName="Clasificación" msprop:Generator_ColumnPropNameInTable="ClasificaciónColumn" msprop:Generator_ColumnPropNameInRow="Clasificación" msprop:Generator_ColumnVarNameInTable="columnClasificación" minOccurs="0">
+              <xs:element name="Clasificación" msprop:Generator_ColumnPropNameInTable="ClasificaciónColumn" msprop:Generator_ColumnPropNameInRow="Clasificación" msprop:Generator_UserColumnName="Clasificación" msprop:Generator_ColumnVarNameInTable="columnClasificación" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Horario" msprop:Generator_UserColumnName="Horario" msprop:Generator_ColumnPropNameInTable="HorarioColumn" msprop:Generator_ColumnPropNameInRow="Horario" msprop:Generator_ColumnVarNameInTable="columnHorario" type="xs:duration" />
+              <xs:element name="Horario" msprop:Generator_ColumnPropNameInTable="HorarioColumn" msprop:Generator_ColumnPropNameInRow="Horario" msprop:Generator_UserColumnName="Horario" msprop:Generator_ColumnVarNameInTable="columnHorario" type="xs:duration" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dtTodasLasSalas" msprop:Generator_RowClassName="dtTodasLasSalasRow" msprop:Generator_RowEvHandlerName="dtTodasLasSalasRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTodasLasSalasRowDeleted" msprop:Generator_RowDeletingName="dtTodasLasSalasRowDeleting" msprop:Generator_RowEvArgName="dtTodasLasSalasRowChangeEvent" msprop:Generator_TablePropName="dtTodasLasSalas" msprop:Generator_RowChangedName="dtTodasLasSalasRowChanged" msprop:Generator_UserTableName="dtTodasLasSalas" msprop:Generator_RowChangingName="dtTodasLasSalasRowChanging" msprop:Generator_TableClassName="dtTodasLasSalasDataTable" msprop:Generator_TableVarName="tabledtTodasLasSalas">
+        <xs:element name="dtTodasLasSalas" msprop:Generator_RowEvHandlerName="dtTodasLasSalasRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTodasLasSalasRowDeleted" msprop:Generator_RowDeletingName="dtTodasLasSalasRowDeleting" msprop:Generator_RowEvArgName="dtTodasLasSalasRowChangeEvent" msprop:Generator_TablePropName="dtTodasLasSalas" msprop:Generator_RowChangedName="dtTodasLasSalasRowChanged" msprop:Generator_UserTableName="dtTodasLasSalas" msprop:Generator_RowChangingName="dtTodasLasSalasRowChanging" msprop:Generator_RowClassName="dtTodasLasSalasRow" msprop:Generator_TableClassName="dtTodasLasSalasDataTable" msprop:Generator_TableVarName="tabledtTodasLasSalas">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Sala" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Sala" msprop:Generator_ColumnPropNameInTable="SalaColumn" msprop:Generator_ColumnPropNameInRow="Sala" msprop:Generator_ColumnVarNameInTable="columnSala" type="xs:int" />
-              <xs:element name="Descripción" msprop:Generator_UserColumnName="Descripción" msprop:Generator_ColumnPropNameInTable="DescripciónColumn" msprop:Generator_ColumnPropNameInRow="Descripción" msprop:Generator_ColumnVarNameInTable="columnDescripción" minOccurs="0">
+              <xs:element name="Sala" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="SalaColumn" msprop:Generator_ColumnPropNameInRow="Sala" msprop:Generator_UserColumnName="Sala" msprop:Generator_ColumnVarNameInTable="columnSala" type="xs:int" />
+              <xs:element name="Descripción" msprop:Generator_ColumnPropNameInTable="DescripciónColumn" msprop:Generator_ColumnPropNameInRow="Descripción" msprop:Generator_UserColumnName="Descripción" msprop:Generator_ColumnVarNameInTable="columnDescripción" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Característica" msprop:Generator_UserColumnName="Característica" msprop:Generator_ColumnPropNameInTable="CaracterísticaColumn" msprop:Generator_ColumnPropNameInRow="Característica" msprop:Generator_ColumnVarNameInTable="columnCaracterística">
+              <xs:element name="Característica" msprop:Generator_ColumnPropNameInTable="CaracterísticaColumn" msprop:Generator_ColumnPropNameInRow="Característica" msprop:Generator_UserColumnName="Característica" msprop:Generator_ColumnVarNameInTable="columnCaracterística">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsTodasLasPeliculas" msprop:Generator_RowEvHandlerName="dsTodasLasPeliculasRowChangeEventHandler" msprop:Generator_RowDeletedName="dsTodasLasPeliculasRowDeleted" msprop:Generator_RowDeletingName="dsTodasLasPeliculasRowDeleting" msprop:Generator_RowEvArgName="dsTodasLasPeliculasRowChangeEvent" msprop:Generator_TablePropName="dsTodasLasPeliculas" msprop:Generator_RowChangedName="dsTodasLasPeliculasRowChanged" msprop:Generator_UserTableName="dsTodasLasPeliculas" msprop:Generator_RowChangingName="dsTodasLasPeliculasRowChanging" msprop:Generator_RowClassName="dsTodasLasPeliculasRow" msprop:Generator_TableClassName="dsTodasLasPeliculasDataTable" msprop:Generator_TableVarName="tabledsTodasLasPeliculas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Película" msprop:Generator_ColumnPropNameInTable="PelículaColumn" msprop:Generator_ColumnPropNameInRow="Película" msprop:Generator_UserColumnName="Película" msprop:Generator_ColumnVarNameInTable="columnPelícula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Director" msprop:Generator_ColumnPropNameInTable="DirectorColumn" msprop:Generator_ColumnPropNameInRow="Director" msprop:Generator_UserColumnName="Director" msprop:Generator_ColumnVarNameInTable="columnDirector">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Clasificación" msprop:Generator_ColumnPropNameInTable="ClasificaciónColumn" msprop:Generator_ColumnPropNameInRow="Clasificación" msprop:Generator_UserColumnName="Clasificación" msprop:Generator_ColumnVarNameInTable="columnClasificación">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estreno" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="EstrenoColumn" msprop:Generator_ColumnPropNameInRow="Estreno" msprop:Generator_UserColumnName="Estreno" msprop:Generator_ColumnVarNameInTable="columnEstreno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

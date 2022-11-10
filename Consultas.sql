@@ -6,7 +6,7 @@ where c.id_cliente in (select c.id_cliente
 							join FORMAS_PAGOS fc on fc.id_forma_pago = dc.id_forma_pago join ENTRADAS e on e.id_entrada = comp.id_entrada 
 					   where (c.id_cliente = e.id_cliente)and forma_pago ='Efectivo') and (DATEDIFF(MONTH, fecha_entrada, getdate()) = 1)
 group by C.nombre_cliente +' '+C.apellido_cliente, month(fecha_entrada), year(fecha_entrada)
-having count(*)>10
+having count(*)>1
 
 --GERA VALDEZ--02--
 select c.clasificacion Clasificación, c.descripcion 'Descripción', count(*) Concurrencia,'Hace 3 meses ' Meses

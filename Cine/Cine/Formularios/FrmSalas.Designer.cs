@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSalas));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dsButacasVipBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -54,18 +55,23 @@
             this.rptMenosDe10 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dtMenos10ButacasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtMenos10ButacasTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtMenos10ButacasTableAdapter();
+            this.btnSalas = new Cine.Botones.buttonPersonalizado();
+            this.rptSalas = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dtTodasLasSalasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtTodasLasSalasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dtTodasLasSalasTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtTodasLasSalasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dsButacasVipBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtMenos10ButacasBindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDescuentoTarjetaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtMenos10ButacasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodasLasSalasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodasLasSalasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dsButacasVipBindingSource
@@ -125,9 +131,8 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnButacasVip);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 235);
+            this.panel6.Location = new System.Drawing.Point(0, 727);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(250, 53);
@@ -140,14 +145,13 @@
             this.btnButacasVip.BorderRadius = 3;
             this.btnButacasVip.BorderSize = 1;
             this.btnButacasVip.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnButacasVip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnButacasVip.FlatAppearance.BorderSize = 0;
             this.btnButacasVip.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
             this.btnButacasVip.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
             this.btnButacasVip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnButacasVip.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnButacasVip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnButacasVip.Location = new System.Drawing.Point(0, 0);
+            this.btnButacasVip.Location = new System.Drawing.Point(0, 313);
             this.btnButacasVip.Margin = new System.Windows.Forms.Padding(2);
             this.btnButacasVip.Name = "btnButacasVip";
             this.btnButacasVip.Size = new System.Drawing.Size(250, 53);
@@ -160,7 +164,7 @@
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 223);
+            this.panel5.Location = new System.Drawing.Point(0, 715);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(250, 12);
@@ -168,9 +172,8 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnMenosDe10);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 170);
+            this.panel4.Location = new System.Drawing.Point(0, 662);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(250, 53);
@@ -183,14 +186,13 @@
             this.btnMenosDe10.BorderRadius = 3;
             this.btnMenosDe10.BorderSize = 1;
             this.btnMenosDe10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenosDe10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMenosDe10.FlatAppearance.BorderSize = 0;
             this.btnMenosDe10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
             this.btnMenosDe10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
             this.btnMenosDe10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenosDe10.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnMenosDe10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnMenosDe10.Location = new System.Drawing.Point(0, 0);
+            this.btnMenosDe10.Location = new System.Drawing.Point(0, 245);
             this.btnMenosDe10.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenosDe10.Name = "btnMenosDe10";
             this.btnMenosDe10.Size = new System.Drawing.Size(250, 53);
@@ -203,7 +205,7 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 146);
+            this.panel3.Location = new System.Drawing.Point(0, 638);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 24);
@@ -211,12 +213,15 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnSalas);
+            this.panel2.Controls.Add(this.btnButacasVip);
+            this.panel2.Controls.Add(this.btnMenosDe10);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 146);
+            this.panel2.Size = new System.Drawing.Size(250, 638);
             this.panel2.TabIndex = 12;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
@@ -233,9 +238,9 @@
             // rptButacasVip
             // 
             this.rptButacasVip.DocumentMapWidth = 38;
-            reportDataSource5.Name = "dsButacasVip";
-            reportDataSource5.Value = this.dsButacasVipBindingSource;
-            this.rptButacasVip.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource4.Name = "dsButacasVip";
+            reportDataSource4.Value = this.dsButacasVipBindingSource;
+            this.rptButacasVip.LocalReport.DataSources.Add(reportDataSource4);
             this.rptButacasVip.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptButacasVip.rdlc";
             this.rptButacasVip.Location = new System.Drawing.Point(256, 31);
             this.rptButacasVip.Name = "rptButacasVip";
@@ -271,9 +276,9 @@
             // rptMenosDe10
             // 
             this.rptMenosDe10.DocumentMapWidth = 42;
-            reportDataSource6.Name = "dsMenos10Entradas";
-            reportDataSource6.Value = this.dtMenos10ButacasBindingSource1;
-            this.rptMenosDe10.LocalReport.DataSources.Add(reportDataSource6);
+            reportDataSource5.Name = "dsMenos10Entradas";
+            reportDataSource5.Value = this.dtMenos10ButacasBindingSource1;
+            this.rptMenosDe10.LocalReport.DataSources.Add(reportDataSource5);
             this.rptMenosDe10.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptMenos10Entradas.rdlc";
             this.rptMenosDe10.Location = new System.Drawing.Point(255, 31);
             this.rptMenosDe10.Name = "rptMenosDe10";
@@ -290,12 +295,62 @@
             // 
             this.dtMenos10ButacasTableAdapter.ClearBeforeFill = true;
             // 
+            // btnSalas
+            // 
+            this.btnSalas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnSalas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnSalas.BorderRadius = 3;
+            this.btnSalas.BorderSize = 1;
+            this.btnSalas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalas.FlatAppearance.BorderSize = 0;
+            this.btnSalas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnSalas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnSalas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalas.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnSalas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnSalas.Location = new System.Drawing.Point(0, 177);
+            this.btnSalas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalas.Name = "btnSalas";
+            this.btnSalas.Size = new System.Drawing.Size(250, 53);
+            this.btnSalas.TabIndex = 13;
+            this.btnSalas.Text = "Salas";
+            this.btnSalas.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnSalas.UseVisualStyleBackColor = false;
+            this.btnSalas.Click += new System.EventHandler(this.btnSalas_Click);
+            // 
+            // rptSalas
+            // 
+            reportDataSource6.Name = "dsTodasLasSalas";
+            reportDataSource6.Value = this.dtTodasLasSalasBindingSource1;
+            this.rptSalas.LocalReport.DataSources.Add(reportDataSource6);
+            this.rptSalas.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptTodasLasSalas.rdlc";
+            this.rptSalas.Location = new System.Drawing.Point(255, 31);
+            this.rptSalas.Name = "rptSalas";
+            this.rptSalas.ServerReport.BearerToken = null;
+            this.rptSalas.Size = new System.Drawing.Size(813, 564);
+            this.rptSalas.TabIndex = 13;
+            // 
+            // dtTodasLasSalasBindingSource
+            // 
+            this.dtTodasLasSalasBindingSource.DataMember = "dtTodasLasSalas";
+            this.dtTodasLasSalasBindingSource.DataSource = this.dsCine;
+            // 
+            // dtTodasLasSalasBindingSource1
+            // 
+            this.dtTodasLasSalasBindingSource1.DataMember = "dtTodasLasSalas";
+            this.dtTodasLasSalasBindingSource1.DataSource = this.dsCine;
+            // 
+            // dtTodasLasSalasTableAdapter
+            // 
+            this.dtTodasLasSalasTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1075, 601);
+            this.Controls.Add(this.rptSalas);
             this.Controls.Add(this.rptMenosDe10);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.rptButacasVip);
@@ -313,13 +368,13 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDescuentoTarjetaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtMenos10ButacasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodasLasSalasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodasLasSalasBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,5 +403,10 @@
         private System.Windows.Forms.BindingSource dtMenos10ButacasBindingSource1;
         private Reportes.dsCineTableAdapters.dtMenos10ButacasTableAdapter dtMenos10ButacasTableAdapter;
         private System.Windows.Forms.PictureBox btnLogout;
+        private Botones.buttonPersonalizado btnSalas;
+        private Microsoft.Reporting.WinForms.ReportViewer rptSalas;
+        private System.Windows.Forms.BindingSource dtTodasLasSalasBindingSource;
+        private System.Windows.Forms.BindingSource dtTodasLasSalasBindingSource1;
+        private Reportes.dsCineTableAdapters.dtTodasLasSalasTableAdapter dtTodasLasSalasTableAdapter;
     }
 }

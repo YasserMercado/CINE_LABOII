@@ -262,6 +262,7 @@
     <EmbeddedResource Include="Reportes\rptRecurrentes.rdlc" />
     <EmbeddedResource Include="Reportes\rptTodasLasEntradas.rdlc" />
     <EmbeddedResource Include="Reportes\rptTodasLasFunciones.rdlc" />
+    <EmbeddedResource Include="Reportes\rptTodasLasPeliculas.rdlc" />
     <EmbeddedResource Include="Reportes\rptTodasLasSalas.rdlc" />
     <EmbeddedResource Include="Reportes\rptTodosLosClientes.rdlc" />
     <EmbeddedResource Include="Reportes\rptTop5VendidasAgosto.rdlc" />

@@ -23,10 +23,15 @@ namespace Cine.Formularios
         {
             rptMasVistas.Hide();
             rptSpielberg.Hide();
+            rptPeliculas.Hide();
         }
 
         private void FrmPeliculas_Load(object sender, EventArgs e)
         {
+            rptPeliculas.Show();
+
+            // TODO: esta línea de código carga datos en la tabla 'dsCine.dsTodasLasPeliculas' Puede moverla o quitarla según sea necesario.
+            this.dsTodasLasPeliculasTableAdapter.Fill(this.dsCine.dsTodasLasPeliculas);
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtRecaudacionSpielberg' Puede moverla o quitarla según sea necesario.
             this.dtRecaudacionSpielbergTableAdapter.Fill(this.dsCine.dtRecaudacionSpielberg);
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtClasificaiconesMasVistas' Puede moverla o quitarla según sea necesario.
@@ -34,6 +39,7 @@ namespace Cine.Formularios
 
             this.rptMasVistas.RefreshReport();
             this.rptSpielberg.RefreshReport();
+            this.rptPeliculas.RefreshReport();
         }
 
         private void btnMasVistas_Click(object sender, EventArgs e)
@@ -88,6 +94,12 @@ namespace Cine.Formularios
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnPeliculas_Click(object sender, EventArgs e)
+        {
+            EsconderReportes();
+            rptPeliculas.Show();
         }
     }
 }

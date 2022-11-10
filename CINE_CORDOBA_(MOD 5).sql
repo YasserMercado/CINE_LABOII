@@ -985,8 +985,46 @@ INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES
 INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (36,4,36,'07/10/2022')
 INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (45,4,37,'07/10/2022')
 INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (54,4,38,'07/10/2022')
+----------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (53,4,39,'07/10/2022')
+
 INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'07/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'08/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'09/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'10/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'11/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'12/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'13/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'14/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'15/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'16/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'17/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'18/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'19/10/2022')
+INSERT INTO ENTRADAS(id_detalle_sala,id_funcion,id_cliente,fecha_entrada) VALUES (12,4,40,'20/10/2022')
 
 
 ---- Insert COMPROBANTES -------
@@ -1006,9 +1044,6 @@ INSERT INTO COMPROBANTES(id_forma_compra,id_detalle_comprobante,id_entrada, mont
 INSERT INTO COMPROBANTES(id_forma_compra,id_detalle_comprobante,id_entrada, monto, cantidad) VALUES (1,14, 14, 200.50, 1)
 INSERT INTO COMPROBANTES(id_forma_compra,id_detalle_comprobante,id_entrada, monto, cantidad) VALUES (1,15, 15, 200.50, 1)
 INSERT INTO COMPROBANTES(id_forma_compra,id_detalle_comprobante,id_entrada, monto, cantidad) VALUES (1,16, 16, 200.50, 1)
-
-
-
 
 
 

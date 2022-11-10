@@ -23,5 +23,9 @@ select  format(e.fecha_entrada,'dd/MM/yyyy') Fecha, c.apellido_cliente +' '+c.no
 		join TIPOS_SALAS tp on s.id_tipo_sala = tp.id_tipo_sala
 				
 	
+	use CINE_CORDOBA
 
-
+		select p.nombre_pelicula Película, nombre Director, clasificacion Clasificación, format(fecha_estreno, 'dd/MM/yyyy') Estreno
+	from PELICULAS p join CLASIFICACIONES c on p.id_clasificacion=c.id_clasificacion
+					 join DIRECTORES d on d.id_director = p.id_director
+				

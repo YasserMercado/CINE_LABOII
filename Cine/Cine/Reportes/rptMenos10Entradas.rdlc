@@ -28,7 +28,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Pelicula</Value>
+                              <Value>Película</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                                 <FontSize>14pt</FontSize>
@@ -262,7 +262,7 @@
         </TablixRowHierarchy>
         <DataSetName>dsMenos10Entradas</DataSetName>
         <Top>1.94028cm</Top>
-        <Left>4.30229cm</Left>
+        <Left>4.61979cm</Left>
         <Height>1.6498cm</Height>
         <Width>11.97207cm</Width>
         <Style>
@@ -426,7 +426,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!!!!!</Value>
+                  <Value>1</Value>
                   <Style>
                     <Color>LightGrey</Color>
                   </Style>

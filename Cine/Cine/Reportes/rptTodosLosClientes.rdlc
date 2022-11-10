@@ -401,7 +401,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.70488cm</Top>
+          <Top>0.67842cm</Top>
           <Left>5.23541cm</Left>
           <Height>1.12917cm</Height>
           <Width>10.52918cm</Width>
@@ -507,10 +507,8 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Falta llenar este cuadro de texto</Value>
+                  <Value>=Globals!PageNumber</Value>
                   <Style>
-                    <FontFamily>Candara</FontFamily>
-                    <Format>d</Format>
                     <Color>LightGrey</Color>
                   </Style>
                 </TextRun>
@@ -522,9 +520,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>1.62322cm</Top>
-          <Left>10.64536cm</Left>
+          <Left>11.24162cm</Left>
           <Height>0.94396cm</Height>
-          <Width>9.89604cm</Width>
+          <Width>9.61729cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>

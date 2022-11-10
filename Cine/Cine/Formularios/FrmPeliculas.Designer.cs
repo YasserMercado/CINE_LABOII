@@ -30,8 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPeliculas));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dtClasificaiconesMasVistasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsCine = new Cine.Reportes.dsCine();
             this.dtRecaudacionSpielbergBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -39,8 +40,10 @@
             this.btnLogout = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnSpielberg = new Cine.Botones.buttonPersonalizado();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnMasVistas = new Cine.Botones.buttonPersonalizado();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,8 +54,11 @@
             this.dtRecaudacionSpielbergBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dtRecaudacionSpielbergTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtRecaudacionSpielbergTableAdapter();
             this.rptSpielberg = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.btnSpielberg = new Cine.Botones.buttonPersonalizado();
-            this.btnMasVistas = new Cine.Botones.buttonPersonalizado();
+            this.btnPeliculas = new Cine.Botones.buttonPersonalizado();
+            this.rptPeliculas = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dsTodasLasPeliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsTodasLasPeliculasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dsTodasLasPeliculasTableAdapter = new Cine.Reportes.dsCineTableAdapters.dsTodasLasPeliculasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtClasificaiconesMasVistasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRecaudacionSpielbergBindingSource2)).BeginInit();
@@ -65,6 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRecaudacionSpielbergBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRecaudacionSpielbergBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsTodasLasPeliculasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsTodasLasPeliculasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtClasificaiconesMasVistasBindingSource
@@ -85,6 +93,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.btnSpielberg);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel6);
@@ -124,13 +133,36 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnSpielberg);
+            this.panel6.Controls.Add(this.btnMasVistas);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 235);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(250, 53);
             this.panel6.TabIndex = 16;
+            // 
+            // btnSpielberg
+            // 
+            this.btnSpielberg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnSpielberg.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnSpielberg.BorderRadius = 3;
+            this.btnSpielberg.BorderSize = 1;
+            this.btnSpielberg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSpielberg.FlatAppearance.BorderSize = 0;
+            this.btnSpielberg.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnSpielberg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnSpielberg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSpielberg.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnSpielberg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnSpielberg.Location = new System.Drawing.Point(0, 302);
+            this.btnSpielberg.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSpielberg.Name = "btnSpielberg";
+            this.btnSpielberg.Size = new System.Drawing.Size(250, 53);
+            this.btnSpielberg.TabIndex = 12;
+            this.btnSpielberg.Text = "Spielberg";
+            this.btnSpielberg.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnSpielberg.UseVisualStyleBackColor = false;
+            this.btnSpielberg.Click += new System.EventHandler(this.btnSpielberg_Click);
             // 
             // panel5
             // 
@@ -143,13 +175,36 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnMasVistas);
+            this.panel4.Controls.Add(this.btnPeliculas);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 170);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(250, 53);
             this.panel4.TabIndex = 14;
+            // 
+            // btnMasVistas
+            // 
+            this.btnMasVistas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnMasVistas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnMasVistas.BorderRadius = 3;
+            this.btnMasVistas.BorderSize = 1;
+            this.btnMasVistas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMasVistas.FlatAppearance.BorderSize = 0;
+            this.btnMasVistas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnMasVistas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnMasVistas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMasVistas.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnMasVistas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnMasVistas.Location = new System.Drawing.Point(0, 0);
+            this.btnMasVistas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMasVistas.Name = "btnMasVistas";
+            this.btnMasVistas.Size = new System.Drawing.Size(250, 53);
+            this.btnMasVistas.TabIndex = 11;
+            this.btnMasVistas.Text = "Más Vistas";
+            this.btnMasVistas.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnMasVistas.UseVisualStyleBackColor = false;
+            this.btnMasVistas.Click += new System.EventHandler(this.btnMasVistas_Click);
             // 
             // panel3
             // 
@@ -184,9 +239,9 @@
             // 
             // rptMasVistas
             // 
-            reportDataSource3.Name = "dsClasificacionesMasVistas";
-            reportDataSource3.Value = this.dtClasificaiconesMasVistasBindingSource;
-            this.rptMasVistas.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "dsClasificacionesMasVistas";
+            reportDataSource1.Value = this.dtClasificaiconesMasVistasBindingSource;
+            this.rptMasVistas.LocalReport.DataSources.Add(reportDataSource1);
             this.rptMasVistas.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptClasificacionesMasVistas.rdlc";
             this.rptMasVistas.Location = new System.Drawing.Point(256, 31);
             this.rptMasVistas.Name = "rptMasVistas";
@@ -227,9 +282,9 @@
             // rptSpielberg
             // 
             this.rptSpielberg.DocumentMapWidth = 44;
-            reportDataSource4.Name = "dsRecaudacionSpielberg";
-            reportDataSource4.Value = this.dtRecaudacionSpielbergBindingSource2;
-            this.rptSpielberg.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource2.Name = "dsRecaudacionSpielberg";
+            reportDataSource2.Value = this.dtRecaudacionSpielbergBindingSource2;
+            this.rptSpielberg.LocalReport.DataSources.Add(reportDataSource2);
             this.rptSpielberg.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptRecaudacionSpielberg.rdlc";
             this.rptSpielberg.Location = new System.Drawing.Point(256, 31);
             this.rptSpielberg.Name = "rptSpielberg";
@@ -237,53 +292,54 @@
             this.rptSpielberg.Size = new System.Drawing.Size(813, 564);
             this.rptSpielberg.TabIndex = 11;
             // 
-            // btnSpielberg
+            // btnPeliculas
             // 
-            this.btnSpielberg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
-            this.btnSpielberg.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnSpielberg.BorderRadius = 3;
-            this.btnSpielberg.BorderSize = 1;
-            this.btnSpielberg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSpielberg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSpielberg.FlatAppearance.BorderSize = 0;
-            this.btnSpielberg.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
-            this.btnSpielberg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.btnSpielberg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSpielberg.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btnSpielberg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnSpielberg.Location = new System.Drawing.Point(0, 0);
-            this.btnSpielberg.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSpielberg.Name = "btnSpielberg";
-            this.btnSpielberg.Size = new System.Drawing.Size(250, 53);
-            this.btnSpielberg.TabIndex = 12;
-            this.btnSpielberg.Text = "Spielberg";
-            this.btnSpielberg.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnSpielberg.UseVisualStyleBackColor = false;
-            this.btnSpielberg.Click += new System.EventHandler(this.btnSpielberg_Click);
+            this.btnPeliculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnPeliculas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnPeliculas.BorderRadius = 3;
+            this.btnPeliculas.BorderSize = 1;
+            this.btnPeliculas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPeliculas.FlatAppearance.BorderSize = 0;
+            this.btnPeliculas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnPeliculas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnPeliculas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeliculas.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnPeliculas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnPeliculas.Location = new System.Drawing.Point(0, 0);
+            this.btnPeliculas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPeliculas.Name = "btnPeliculas";
+            this.btnPeliculas.Size = new System.Drawing.Size(250, 53);
+            this.btnPeliculas.TabIndex = 12;
+            this.btnPeliculas.Text = "Películas";
+            this.btnPeliculas.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnPeliculas.UseVisualStyleBackColor = false;
+            this.btnPeliculas.Click += new System.EventHandler(this.btnPeliculas_Click);
             // 
-            // btnMasVistas
+            // rptPeliculas
             // 
-            this.btnMasVistas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
-            this.btnMasVistas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnMasVistas.BorderRadius = 3;
-            this.btnMasVistas.BorderSize = 1;
-            this.btnMasVistas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMasVistas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMasVistas.FlatAppearance.BorderSize = 0;
-            this.btnMasVistas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
-            this.btnMasVistas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.btnMasVistas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMasVistas.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btnMasVistas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnMasVistas.Location = new System.Drawing.Point(0, 0);
-            this.btnMasVistas.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMasVistas.Name = "btnMasVistas";
-            this.btnMasVistas.Size = new System.Drawing.Size(250, 53);
-            this.btnMasVistas.TabIndex = 11;
-            this.btnMasVistas.Text = "Más Vistas";
-            this.btnMasVistas.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnMasVistas.UseVisualStyleBackColor = false;
-            this.btnMasVistas.Click += new System.EventHandler(this.btnMasVistas_Click);
+            reportDataSource3.Name = "dsTodasLasPeliculas";
+            reportDataSource3.Value = this.dsTodasLasPeliculasBindingSource1;
+            this.rptPeliculas.LocalReport.DataSources.Add(reportDataSource3);
+            this.rptPeliculas.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptTodasLasPeliculas.rdlc";
+            this.rptPeliculas.Location = new System.Drawing.Point(256, 31);
+            this.rptPeliculas.Name = "rptPeliculas";
+            this.rptPeliculas.ServerReport.BearerToken = null;
+            this.rptPeliculas.Size = new System.Drawing.Size(813, 564);
+            this.rptPeliculas.TabIndex = 12;
+            // 
+            // dsTodasLasPeliculasBindingSource
+            // 
+            this.dsTodasLasPeliculasBindingSource.DataMember = "dsTodasLasPeliculas";
+            this.dsTodasLasPeliculasBindingSource.DataSource = this.dsCine;
+            // 
+            // dsTodasLasPeliculasBindingSource1
+            // 
+            this.dsTodasLasPeliculasBindingSource1.DataMember = "dsTodasLasPeliculas";
+            this.dsTodasLasPeliculasBindingSource1.DataSource = this.dsCine;
+            // 
+            // dsTodasLasPeliculasTableAdapter
+            // 
+            this.dsTodasLasPeliculasTableAdapter.ClearBeforeFill = true;
             // 
             // FrmPeliculas
             // 
@@ -291,6 +347,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1075, 601);
+            this.Controls.Add(this.rptPeliculas);
             this.Controls.Add(this.rptSpielberg);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.rptMasVistas);
@@ -315,6 +372,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRecaudacionSpielbergBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRecaudacionSpielbergBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsTodasLasPeliculasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsTodasLasPeliculasBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -342,5 +401,10 @@
         private Microsoft.Reporting.WinForms.ReportViewer rptSpielberg;
         private System.Windows.Forms.BindingSource dtRecaudacionSpielbergBindingSource2;
         private System.Windows.Forms.PictureBox btnLogout;
+        private Botones.buttonPersonalizado btnPeliculas;
+        private Microsoft.Reporting.WinForms.ReportViewer rptPeliculas;
+        private System.Windows.Forms.BindingSource dsTodasLasPeliculasBindingSource;
+        private System.Windows.Forms.BindingSource dsTodasLasPeliculasBindingSource1;
+        private Reportes.dsCineTableAdapters.dsTodasLasPeliculasTableAdapter dsTodasLasPeliculasTableAdapter;
     }
 }

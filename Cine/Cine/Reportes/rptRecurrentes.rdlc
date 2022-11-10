@@ -341,7 +341,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>2.07257cm</Top>
-        <Left>3.95521cm</Left>
+        <Left>4.94499cm</Left>
         <Height>1.3852cm</Height>
         <Width>11.40168cm</Width>
         <Style>
@@ -480,7 +480,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!!</Value>
+                  <Value>1</Value>
                   <Style>
                     <Color>LightGrey</Color>
                   </Style>
@@ -544,7 +544,6 @@
           </Style>
         </Textbox>
         <Line Name="Line3">
-          <Top>0cm</Top>
           <Height>0cm</Height>
           <Width>18.74224cm</Width>
           <ZIndex>2</ZIndex>

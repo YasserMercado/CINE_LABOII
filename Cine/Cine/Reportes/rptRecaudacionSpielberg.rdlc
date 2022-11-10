@@ -189,7 +189,7 @@
         </TablixRowHierarchy>
         <DataSetName>dsRecaudacionSpielberg</DataSetName>
         <Top>1.61079cm</Top>
-        <Left>5.09604cm</Left>
+        <Left>5.48583cm</Left>
         <Height>1.49104cm</Height>
         <Width>10.27876cm</Width>
         <Style>
@@ -353,7 +353,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!</Value>
+                  <Value>1</Value>
                   <Style>
                     <FontFamily>Candara</FontFamily>
                     <Color>LightGrey</Color>

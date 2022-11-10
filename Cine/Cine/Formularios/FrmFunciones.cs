@@ -16,19 +16,33 @@ namespace Cine.Formularios
         public FrmFunciones()
         {
             InitializeComponent();
+            
+        }
+
+
+        private void EsconderReportes()
+        {
+            rptFunciones.Hide();
             rptTop5Agosto.Hide();
         }
 
+
+
         private void FrmFunciones_Load(object sender, EventArgs e)
         {
+            rptFunciones.Show();
+            // TODO: esta línea de código carga datos en la tabla 'dsCine.dtTodasLasFunciones' Puede moverla o quitarla según sea necesario.
+            this.dtTodasLasFuncionesTableAdapter.Fill(this.dsCine.dtTodasLasFunciones);
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtTo5VendidasAgosto' Puede moverla o quitarla según sea necesario.
             this.dtTo5VendidasAgostoTableAdapter.Fill(this.dsCine.dtTo5VendidasAgosto);
 
             this.rptTop5Agosto.RefreshReport();
+            this.rptFunciones.RefreshReport();
         }
 
         private void btnDescuentoTarjeta_Click(object sender, EventArgs e)
         {
+            EsconderReportes();
             rptTop5Agosto.Show();
         }
 
@@ -66,6 +80,12 @@ namespace Cine.Formularios
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnFunciones_Click(object sender, EventArgs e)
+        {
+            EsconderReportes();
+            rptFunciones.Show();
         }
     }
 }

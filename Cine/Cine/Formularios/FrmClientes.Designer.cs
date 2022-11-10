@@ -314,7 +314,7 @@
             this.btnTodos.Name = "btnTodos";
             this.btnTodos.Size = new System.Drawing.Size(250, 53);
             this.btnTodos.TabIndex = 11;
-            this.btnTodos.Text = "Todos";
+            this.btnTodos.Text = "Clientes";
             this.btnTodos.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
             this.btnTodos.UseVisualStyleBackColor = false;
             this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);

@@ -14,7 +14,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.6926cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -95,7 +95,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.6926cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -188,9 +188,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>dsVentaOnline</DataSetName>
-        <Top>1.24037cm</Top>
+        <Top>1.31975cm</Top>
         <Left>5.42079cm</Left>
-        <Height>1.2cm</Height>
+        <Height>1.3852cm</Height>
         <Width>10.3975cm</Width>
         <Style>
           <Border>
@@ -353,7 +353,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!!!!!</Value>
+                  <Value>1</Value>
                   <Style>
                     <FontFamily>Candara</FontFamily>
                     <Color>LightGrey</Color>

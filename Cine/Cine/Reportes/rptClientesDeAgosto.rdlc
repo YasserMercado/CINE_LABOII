@@ -188,8 +188,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>dtsClientesDeAgosto</DataSetName>
-        <Top>1.84891cm</Top>
-        <Left>6.02933cm</Left>
+        <Top>1.9812cm</Top>
+        <Left>5.73751cm</Left>
         <Height>1.46458cm</Height>
         <Width>10.02708cm</Width>
         <Style>
@@ -353,7 +353,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!</Value>
+                  <Value>1</Value>
                   <Style>
                     <Format>d</Format>
                     <Color>LightGrey</Color>

@@ -29,18 +29,21 @@ namespace Cine.Formularios
 
         private void FrmClientes_Load(object sender, EventArgs e)
         {
+            rptTodos.Show();
+
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtClientesAgosto' Puede moverla o quitarla según sea necesario.
             this.dtClientesAgostoTableAdapter.Fill(this.dsCine.dtClientesAgosto);
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtTodosLosClientes' Puede moverla o quitarla según sea necesario.
             this.dtTodosLosClientesTableAdapter.Fill(this.dsCine.dtTodosLosClientes);
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtClientesAgosto' Puede moverla o quitarla según sea necesario.
-            //this.dtClientesAgostoTableAdapter.Fill(this.dsCine.dtClientesAgosto);
+            this.dtClientesAgostoTableAdapter.Fill(this.dsCine.dtClientesAgosto);
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtRecurrentes' Puede moverla o quitarla según sea necesario.
             this.dtRecurrentesTableAdapter.Fill(this.dsCine.dtRecurrentes);
             this.rptFrecuentes.RefreshReport();
             this.rptClientesAgosto.RefreshReport();
             this.rptTodos.RefreshReport();
             this.rptClientesAgosto.RefreshReport();
+            
         }
 
 
@@ -77,8 +80,10 @@ namespace Cine.Formularios
 
         private void btnFrecuentes_Click(object sender, EventArgs e)
         {
+           
             EsconderReportes();
             rptFrecuentes.Show();
+
         }
 
         private void btnDeAgosto_Click(object sender, EventArgs e)

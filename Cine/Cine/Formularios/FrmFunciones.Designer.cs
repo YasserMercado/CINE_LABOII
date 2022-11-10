@@ -31,19 +31,25 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFunciones));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dtTo5VendidasAgostoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsCine = new Cine.Reportes.dsCine();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnDescuentoTarjeta = new Cine.Botones.buttonPersonalizado();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.dtTo5VendidasAgostoTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtTo5VendidasAgostoTableAdapter();
             this.rptTop5Agosto = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.btnDescuentoTarjeta = new Cine.Botones.buttonPersonalizado();
+            this.rptFunciones = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dtTodasLasFuncionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtTodasLasFuncionesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dtTodasLasFuncionesTableAdapter = new Cine.Reportes.dsCineTableAdapters.dtTodasLasFuncionesTableAdapter();
+            this.btnFunciones = new Cine.Botones.buttonPersonalizado();
             ((System.ComponentModel.ISupportInitialize)(this.dtTo5VendidasAgostoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCine)).BeginInit();
             this.panel1.SuspendLayout();
@@ -52,6 +58,8 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodasLasFuncionesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodasLasFuncionesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtTo5VendidasAgostoBindingSource
@@ -67,6 +75,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.btnDescuentoTarjeta);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel4);
@@ -104,13 +113,36 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnDescuentoTarjeta);
+            this.panel4.Controls.Add(this.btnFunciones);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 170);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(250, 53);
             this.panel4.TabIndex = 14;
+            // 
+            // btnDescuentoTarjeta
+            // 
+            this.btnDescuentoTarjeta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnDescuentoTarjeta.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnDescuentoTarjeta.BorderRadius = 3;
+            this.btnDescuentoTarjeta.BorderSize = 1;
+            this.btnDescuentoTarjeta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDescuentoTarjeta.FlatAppearance.BorderSize = 0;
+            this.btnDescuentoTarjeta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnDescuentoTarjeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnDescuentoTarjeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDescuentoTarjeta.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnDescuentoTarjeta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnDescuentoTarjeta.Location = new System.Drawing.Point(0, 238);
+            this.btnDescuentoTarjeta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDescuentoTarjeta.Name = "btnDescuentoTarjeta";
+            this.btnDescuentoTarjeta.Size = new System.Drawing.Size(250, 53);
+            this.btnDescuentoTarjeta.TabIndex = 11;
+            this.btnDescuentoTarjeta.Text = "Top 5 De Agosto";
+            this.btnDescuentoTarjeta.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnDescuentoTarjeta.UseVisualStyleBackColor = false;
+            this.btnDescuentoTarjeta.Click += new System.EventHandler(this.btnDescuentoTarjeta_Click);
             // 
             // panel3
             // 
@@ -171,29 +203,54 @@
             this.rptTop5Agosto.Size = new System.Drawing.Size(813, 564);
             this.rptTop5Agosto.TabIndex = 21;
             // 
-            // btnDescuentoTarjeta
+            // rptFunciones
             // 
-            this.btnDescuentoTarjeta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
-            this.btnDescuentoTarjeta.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnDescuentoTarjeta.BorderRadius = 3;
-            this.btnDescuentoTarjeta.BorderSize = 1;
-            this.btnDescuentoTarjeta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDescuentoTarjeta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDescuentoTarjeta.FlatAppearance.BorderSize = 0;
-            this.btnDescuentoTarjeta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
-            this.btnDescuentoTarjeta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
-            this.btnDescuentoTarjeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDescuentoTarjeta.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btnDescuentoTarjeta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnDescuentoTarjeta.Location = new System.Drawing.Point(0, 0);
-            this.btnDescuentoTarjeta.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDescuentoTarjeta.Name = "btnDescuentoTarjeta";
-            this.btnDescuentoTarjeta.Size = new System.Drawing.Size(250, 53);
-            this.btnDescuentoTarjeta.TabIndex = 11;
-            this.btnDescuentoTarjeta.Text = "Top 5 De Agosto";
-            this.btnDescuentoTarjeta.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
-            this.btnDescuentoTarjeta.UseVisualStyleBackColor = false;
-            this.btnDescuentoTarjeta.Click += new System.EventHandler(this.btnDescuentoTarjeta_Click);
+            reportDataSource2.Name = "ds";
+            reportDataSource2.Value = this.dtTodasLasFuncionesBindingSource1;
+            this.rptFunciones.LocalReport.DataSources.Add(reportDataSource2);
+            this.rptFunciones.LocalReport.ReportEmbeddedResource = "Cine.Reportes.rptTodasLasFunciones.rdlc";
+            this.rptFunciones.Location = new System.Drawing.Point(256, 31);
+            this.rptFunciones.Name = "rptFunciones";
+            this.rptFunciones.ServerReport.BearerToken = null;
+            this.rptFunciones.Size = new System.Drawing.Size(813, 564);
+            this.rptFunciones.TabIndex = 22;
+            // 
+            // dtTodasLasFuncionesBindingSource
+            // 
+            this.dtTodasLasFuncionesBindingSource.DataMember = "dtTodasLasFunciones";
+            this.dtTodasLasFuncionesBindingSource.DataSource = this.dsCine;
+            // 
+            // dtTodasLasFuncionesBindingSource1
+            // 
+            this.dtTodasLasFuncionesBindingSource1.DataMember = "dtTodasLasFunciones";
+            this.dtTodasLasFuncionesBindingSource1.DataSource = this.dsCine;
+            // 
+            // dtTodasLasFuncionesTableAdapter
+            // 
+            this.dtTodasLasFuncionesTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnFunciones
+            // 
+            this.btnFunciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(27)))), ((int)(((byte)(39)))));
+            this.btnFunciones.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnFunciones.BorderRadius = 3;
+            this.btnFunciones.BorderSize = 1;
+            this.btnFunciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFunciones.FlatAppearance.BorderSize = 0;
+            this.btnFunciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(0)))), ((int)(((byte)(19)))));
+            this.btnFunciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(60)))), ((int)(((byte)(69)))));
+            this.btnFunciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFunciones.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnFunciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnFunciones.Location = new System.Drawing.Point(0, 0);
+            this.btnFunciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFunciones.Name = "btnFunciones";
+            this.btnFunciones.Size = new System.Drawing.Size(250, 53);
+            this.btnFunciones.TabIndex = 23;
+            this.btnFunciones.Text = "Funciones";
+            this.btnFunciones.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(191)))), ((int)(((byte)(55)))));
+            this.btnFunciones.UseVisualStyleBackColor = false;
+            this.btnFunciones.Click += new System.EventHandler(this.btnFunciones_Click);
             // 
             // FrmFunciones
             // 
@@ -201,6 +258,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1075, 601);
+            this.Controls.Add(this.rptFunciones);
             this.Controls.Add(this.rptTop5Agosto);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.panel1);
@@ -220,6 +278,8 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodasLasFuncionesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTodasLasFuncionesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,5 +299,10 @@
         private Reportes.dsCineTableAdapters.dtTo5VendidasAgostoTableAdapter dtTo5VendidasAgostoTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer rptTop5Agosto;
         private System.Windows.Forms.PictureBox btnLogout;
+        private Microsoft.Reporting.WinForms.ReportViewer rptFunciones;
+        private System.Windows.Forms.BindingSource dtTodasLasFuncionesBindingSource;
+        private System.Windows.Forms.BindingSource dtTodasLasFuncionesBindingSource1;
+        private Reportes.dsCineTableAdapters.dtTodasLasFuncionesTableAdapter dtTodasLasFuncionesTableAdapter;
+        private Botones.buttonPersonalizado btnFunciones;
     }
 }

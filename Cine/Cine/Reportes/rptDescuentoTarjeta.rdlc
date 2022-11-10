@@ -419,7 +419,7 @@
         </TablixRowHierarchy>
         <DataSetName>dsDescuentoTarjeta</DataSetName>
         <Top>1.94028cm</Top>
-        <Left>2.7362cm</Left>
+        <Left>3.0537cm</Left>
         <Height>1.5175cm</Height>
         <Width>15.14585cm</Width>
         <Style>
@@ -583,7 +583,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>!!!!</Value>
+                  <Value>1</Value>
                   <Style>
                     <FontFamily>Candara</FontFamily>
                     <Color>LightGrey</Color>

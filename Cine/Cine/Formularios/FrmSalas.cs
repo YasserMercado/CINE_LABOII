@@ -23,10 +23,15 @@ namespace Cine.Formularios
         {
             rptButacasVip.Hide();
             rptMenosDe10.Hide();
+            rptSalas.Hide();
         }
 
         private void FrmSalas_Load(object sender, EventArgs e)
         {
+            rptSalas.Show();
+
+            // TODO: esta línea de código carga datos en la tabla 'dsCine.dtTodasLasSalas' Puede moverla o quitarla según sea necesario.
+            this.dtTodasLasSalasTableAdapter.Fill(this.dsCine.dtTodasLasSalas);
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dtMenos10Butacas' Puede moverla o quitarla según sea necesario.
             this.dtMenos10ButacasTableAdapter.Fill(this.dsCine.dtMenos10Butacas);
             // TODO: esta línea de código carga datos en la tabla 'dsCine.dsButacasVip' Puede moverla o quitarla según sea necesario.
@@ -36,6 +41,7 @@ namespace Cine.Formularios
 
             this.rptButacasVip.RefreshReport();
             this.rptMenosDe10.RefreshReport();
+            this.rptSalas.RefreshReport();
         }
 
         private void btnMenosDe10_Click(object sender, EventArgs e)
@@ -84,6 +90,12 @@ namespace Cine.Formularios
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnSalas_Click(object sender, EventArgs e)
+        {
+            EsconderReportes();
+            rptSalas.Show();
         }
     }
 }
